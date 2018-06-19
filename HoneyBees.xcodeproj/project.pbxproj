@@ -1,0 +1,726 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1412464020C7E31F0008A9EF /* Icon-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 1412463F20C7E31F0008A9EF /* Icon-32.png */; };
+		1412464B20C7EB690008A9EF /* bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 1412464620C7EB680008A9EF /* bubble.png */; };
+		1412464C20C7EB690008A9EF /* recent.png in Resources */ = {isa = PBXBuildFile; fileRef = 1412464720C7EB680008A9EF /* recent.png */; };
+		1412464D20C7EB690008A9EF /* conversation.png in Resources */ = {isa = PBXBuildFile; fileRef = 1412464820C7EB680008A9EF /* conversation.png */; };
+		1412464E20C7EB690008A9EF /* contact.png in Resources */ = {isa = PBXBuildFile; fileRef = 1412464920C7EB680008A9EF /* contact.png */; };
+		1412464F20C7EB690008A9EF /* meeting.png in Resources */ = {isa = PBXBuildFile; fileRef = 1412464A20C7EB680008A9EF /* meeting.png */; };
+		1412465220C7EEFC0008A9EF /* ConversationTabsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1412465120C7EEFC0008A9EF /* ConversationTabsViewController.m */; };
+		1412465520C7EF500008A9EF /* ConversatoinsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1412465420C7EF500008A9EF /* ConversatoinsViewController.m */; };
+		1464877D20D132F00095A7F8 /* myViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1464877C20D132F00095A7F8 /* myViewController.m */; };
+		14D6FDA420C7B69E00FFD5F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D6FDA320C7B69E00FFD5F7 /* main.m */; };
+		14D6FDA720C7B69E00FFD5F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D6FDA620C7B69E00FFD5F7 /* AppDelegate.m */; };
+		14D6FDAA20C7B69E00FFD5F7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D6FDA920C7B69E00FFD5F7 /* ViewController.m */; };
+		14D6FDAF20C7B69E00FFD5F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14D6FDAE20C7B69E00FFD5F7 /* Assets.xcassets */; };
+		14D6FDB220C7B69E00FFD5F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14D6FDB020C7B69E00FFD5F7 /* LaunchScreen.storyboard */; };
+		14D6FDBD20C7B69E00FFD5F7 /* HoneyBeesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D6FDBC20C7B69E00FFD5F7 /* HoneyBeesTests.m */; };
+		14D6FDC820C7B69E00FFD5F7 /* HoneyBeesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D6FDC720C7B69E00FFD5F7 /* HoneyBeesUITests.m */; };
+		14D6FDD720C7B6CF00FFD5F7 /* Rainbow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D6FDD520C7B6CF00FFD5F7 /* Rainbow.framework */; };
+		14D6FDD820C7B6CF00FFD5F7 /* WebRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D6FDD620C7B6CF00FFD5F7 /* WebRTC.framework */; };
+		14D6FDD920C7B6E200FFD5F7 /* Rainbow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D6FDD520C7B6CF00FFD5F7 /* Rainbow.framework */; };
+		14D6FDDA20C7B6E200FFD5F7 /* Rainbow.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 14D6FDD520C7B6CF00FFD5F7 /* Rainbow.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		14D6FDDB20C7B6E200FFD5F7 /* WebRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D6FDD620C7B6CF00FFD5F7 /* WebRTC.framework */; };
+		14D6FDDC20C7B6E200FFD5F7 /* WebRTC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 14D6FDD620C7B6CF00FFD5F7 /* WebRTC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		14D6FDDF20C7B71100FFD5F7 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14D6FDDE20C7B71100FFD5F7 /* Info.plist */; };
+		14D6FDE820C7BA3800FFD5F7 /* HoneyBees icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 14D6FDE720C7BA3800FFD5F7 /* HoneyBees icon.png */; };
+		14D6FDF120C7BDC000FFD5F7 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D6FDF020C7BDC000FFD5F7 /* LoginViewController.m */; };
+		14DA4A1F20D0FDCA004EB41B /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14DA4A1D20D0FDCA004EB41B /* CustomTableViewCell.m */; };
+		14DA4A2020D0FDCA004EB41B /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14DA4A1E20D0FDCA004EB41B /* CustomTableViewCell.xib */; };
+		14EA432220C927F300190B7C /* ew.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 14EA432120C927F300190B7C /* ew.jpg */; };
+		14F4AF7C20C9426500254B44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14F4AF7B20C9426500254B44 /* Main.storyboard */; };
+		ECE227C7C1209F32073F6023 /* Pods_HoneyBees.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CAFB0D33A08AD43225F4773 /* Pods_HoneyBees.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		14D6FDB920C7B69E00FFD5F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14D6FD9720C7B69D00FFD5F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14D6FD9E20C7B69E00FFD5F7;
+			remoteInfo = HoneyBees;
+		};
+		14D6FDC420C7B69E00FFD5F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14D6FD9720C7B69D00FFD5F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14D6FD9E20C7B69E00FFD5F7;
+			remoteInfo = HoneyBees;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		14D6FDDD20C7B6E200FFD5F7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				14D6FDDA20C7B6E200FFD5F7 /* Rainbow.framework in Embed Frameworks */,
+				14D6FDDC20C7B6E200FFD5F7 /* WebRTC.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1412463F20C7E31F0008A9EF /* Icon-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-32.png"; sourceTree = "<group>"; };
+		1412464620C7EB680008A9EF /* bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubble.png; sourceTree = "<group>"; };
+		1412464720C7EB680008A9EF /* recent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recent.png; sourceTree = "<group>"; };
+		1412464820C7EB680008A9EF /* conversation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = conversation.png; sourceTree = "<group>"; };
+		1412464920C7EB680008A9EF /* contact.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contact.png; sourceTree = "<group>"; };
+		1412464A20C7EB680008A9EF /* meeting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meeting.png; sourceTree = "<group>"; };
+		1412465020C7EEFC0008A9EF /* ConversationTabsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationTabsViewController.h; sourceTree = "<group>"; };
+		1412465120C7EEFC0008A9EF /* ConversationTabsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationTabsViewController.m; sourceTree = "<group>"; };
+		1412465320C7EF500008A9EF /* ConversatoinsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversatoinsViewController.h; sourceTree = "<group>"; };
+		1412465420C7EF500008A9EF /* ConversatoinsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversatoinsViewController.m; sourceTree = "<group>"; };
+		1464877B20D132F00095A7F8 /* myViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myViewController.h; sourceTree = "<group>"; };
+		1464877C20D132F00095A7F8 /* myViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myViewController.m; sourceTree = "<group>"; };
+		14D6FD9F20C7B69E00FFD5F7 /* HoneyBees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoneyBees.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		14D6FDA320C7B69E00FFD5F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		14D6FDA520C7B69E00FFD5F7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		14D6FDA620C7B69E00FFD5F7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		14D6FDA820C7B69E00FFD5F7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		14D6FDA920C7B69E00FFD5F7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		14D6FDAE20C7B69E00FFD5F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		14D6FDB120C7B69E00FFD5F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		14D6FDB820C7B69E00FFD5F7 /* HoneyBeesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoneyBeesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14D6FDBC20C7B69E00FFD5F7 /* HoneyBeesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HoneyBeesTests.m; sourceTree = "<group>"; };
+		14D6FDBE20C7B69E00FFD5F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14D6FDC320C7B69E00FFD5F7 /* HoneyBeesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoneyBeesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14D6FDC720C7B69E00FFD5F7 /* HoneyBeesUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HoneyBeesUITests.m; sourceTree = "<group>"; };
+		14D6FDC920C7B69E00FFD5F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14D6FDD520C7B6CF00FFD5F7 /* Rainbow.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Rainbow.framework; sourceTree = "<group>"; };
+		14D6FDD620C7B6CF00FFD5F7 /* WebRTC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WebRTC.framework; sourceTree = "<group>"; };
+		14D6FDDE20C7B71100FFD5F7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14D6FDE720C7BA3800FFD5F7 /* HoneyBees icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HoneyBees icon.png"; sourceTree = "<group>"; };
+		14D6FDEF20C7BDC000FFD5F7 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		14D6FDF020C7BDC000FFD5F7 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		14DA4A1C20D0FDCA004EB41B /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
+		14DA4A1D20D0FDCA004EB41B /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
+		14DA4A1E20D0FDCA004EB41B /* CustomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		14EA432120C927F300190B7C /* ew.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ew.jpg; sourceTree = "<group>"; };
+		14F4AF7B20C9426500254B44 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		5CAFB0D33A08AD43225F4773 /* Pods_HoneyBees.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HoneyBees.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		75470ABDD558916972829B06 /* Pods-HoneyBees.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoneyBees.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HoneyBees/Pods-HoneyBees.debug.xcconfig"; sourceTree = "<group>"; };
+		CB06BB71352797BB159C9DFA /* Pods-HoneyBees.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoneyBees.release.xcconfig"; path = "Pods/Target Support Files/Pods-HoneyBees/Pods-HoneyBees.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		14D6FD9C20C7B69E00FFD5F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14D6FDD720C7B6CF00FFD5F7 /* Rainbow.framework in Frameworks */,
+				14D6FDD820C7B6CF00FFD5F7 /* WebRTC.framework in Frameworks */,
+				14D6FDD920C7B6E200FFD5F7 /* Rainbow.framework in Frameworks */,
+				14D6FDDB20C7B6E200FFD5F7 /* WebRTC.framework in Frameworks */,
+				ECE227C7C1209F32073F6023 /* Pods_HoneyBees.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14D6FDB520C7B69E00FFD5F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14D6FDC020C7B69E00FFD5F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1412465620C7F05C0008A9EF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				14EA432120C927F300190B7C /* ew.jpg */,
+				1412464920C7EB680008A9EF /* contact.png */,
+				1412464A20C7EB680008A9EF /* meeting.png */,
+				14D6FDE720C7BA3800FFD5F7 /* HoneyBees icon.png */,
+				1412463F20C7E31F0008A9EF /* Icon-32.png */,
+				1412464820C7EB680008A9EF /* conversation.png */,
+				1412464720C7EB680008A9EF /* recent.png */,
+				1412464620C7EB680008A9EF /* bubble.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		14D6FD9620C7B69D00FFD5F7 = {
+			isa = PBXGroup;
+			children = (
+				14D6FDD520C7B6CF00FFD5F7 /* Rainbow.framework */,
+				14D6FDD620C7B6CF00FFD5F7 /* WebRTC.framework */,
+				14D6FDA120C7B69E00FFD5F7 /* HoneyBees */,
+				14D6FDBB20C7B69E00FFD5F7 /* HoneyBeesTests */,
+				14D6FDC620C7B69E00FFD5F7 /* HoneyBeesUITests */,
+				14D6FDA020C7B69E00FFD5F7 /* Products */,
+				7EC28D952AA103E53CB6E291 /* Pods */,
+				37F6062D8A0E40A142C8D8E4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		14D6FDA020C7B69E00FFD5F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14D6FD9F20C7B69E00FFD5F7 /* HoneyBees.app */,
+				14D6FDB820C7B69E00FFD5F7 /* HoneyBeesTests.xctest */,
+				14D6FDC320C7B69E00FFD5F7 /* HoneyBeesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14D6FDA120C7B69E00FFD5F7 /* HoneyBees */ = {
+			isa = PBXGroup;
+			children = (
+				1412465620C7F05C0008A9EF /* Resources */,
+				14D6FDE620C7B81E00FFD5F7 /* Conversations */,
+				14D6FDE020C7B72F00FFD5F7 /* Login */,
+				14D6FDA520C7B69E00FFD5F7 /* AppDelegate.h */,
+				14D6FDA620C7B69E00FFD5F7 /* AppDelegate.m */,
+				14D6FDA820C7B69E00FFD5F7 /* ViewController.h */,
+				14D6FDA920C7B69E00FFD5F7 /* ViewController.m */,
+				14F4AF7B20C9426500254B44 /* Main.storyboard */,
+				14D6FDAE20C7B69E00FFD5F7 /* Assets.xcassets */,
+				14D6FDB020C7B69E00FFD5F7 /* LaunchScreen.storyboard */,
+				14D6FDDE20C7B71100FFD5F7 /* Info.plist */,
+				14D6FDA220C7B69E00FFD5F7 /* Supporting Files */,
+				1464877B20D132F00095A7F8 /* myViewController.h */,
+				1464877C20D132F00095A7F8 /* myViewController.m */,
+			);
+			path = HoneyBees;
+			sourceTree = "<group>";
+		};
+		14D6FDA220C7B69E00FFD5F7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				14D6FDA320C7B69E00FFD5F7 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		14D6FDBB20C7B69E00FFD5F7 /* HoneyBeesTests */ = {
+			isa = PBXGroup;
+			children = (
+				14D6FDBC20C7B69E00FFD5F7 /* HoneyBeesTests.m */,
+				14D6FDBE20C7B69E00FFD5F7 /* Info.plist */,
+			);
+			path = HoneyBeesTests;
+			sourceTree = "<group>";
+		};
+		14D6FDC620C7B69E00FFD5F7 /* HoneyBeesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				14D6FDC720C7B69E00FFD5F7 /* HoneyBeesUITests.m */,
+				14D6FDC920C7B69E00FFD5F7 /* Info.plist */,
+			);
+			path = HoneyBeesUITests;
+			sourceTree = "<group>";
+		};
+		14D6FDE020C7B72F00FFD5F7 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				14D6FDEF20C7BDC000FFD5F7 /* LoginViewController.h */,
+				14D6FDF020C7BDC000FFD5F7 /* LoginViewController.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		14D6FDE620C7B81E00FFD5F7 /* Conversations */ = {
+			isa = PBXGroup;
+			children = (
+				1412465020C7EEFC0008A9EF /* ConversationTabsViewController.h */,
+				1412465120C7EEFC0008A9EF /* ConversationTabsViewController.m */,
+				1412465320C7EF500008A9EF /* ConversatoinsViewController.h */,
+				1412465420C7EF500008A9EF /* ConversatoinsViewController.m */,
+				14DA4A1C20D0FDCA004EB41B /* CustomTableViewCell.h */,
+				14DA4A1D20D0FDCA004EB41B /* CustomTableViewCell.m */,
+				14DA4A1E20D0FDCA004EB41B /* CustomTableViewCell.xib */,
+			);
+			name = Conversations;
+			sourceTree = "<group>";
+		};
+		37F6062D8A0E40A142C8D8E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5CAFB0D33A08AD43225F4773 /* Pods_HoneyBees.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7EC28D952AA103E53CB6E291 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				75470ABDD558916972829B06 /* Pods-HoneyBees.debug.xcconfig */,
+				CB06BB71352797BB159C9DFA /* Pods-HoneyBees.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		14D6FD9E20C7B69E00FFD5F7 /* HoneyBees */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14D6FDCC20C7B69E00FFD5F7 /* Build configuration list for PBXNativeTarget "HoneyBees" */;
+			buildPhases = (
+				AF6599DA092D7AFDB5F491A3 /* [CP] Check Pods Manifest.lock */,
+				14D6FD9B20C7B69E00FFD5F7 /* Sources */,
+				14D6FD9C20C7B69E00FFD5F7 /* Frameworks */,
+				14D6FD9D20C7B69E00FFD5F7 /* Resources */,
+				14D6FDDD20C7B6E200FFD5F7 /* Embed Frameworks */,
+				7A703953D0645C8D5319168A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HoneyBees;
+			productName = HoneyBees;
+			productReference = 14D6FD9F20C7B69E00FFD5F7 /* HoneyBees.app */;
+			productType = "com.apple.product-type.application";
+		};
+		14D6FDB720C7B69E00FFD5F7 /* HoneyBeesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14D6FDCF20C7B69E00FFD5F7 /* Build configuration list for PBXNativeTarget "HoneyBeesTests" */;
+			buildPhases = (
+				14D6FDB420C7B69E00FFD5F7 /* Sources */,
+				14D6FDB520C7B69E00FFD5F7 /* Frameworks */,
+				14D6FDB620C7B69E00FFD5F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				14D6FDBA20C7B69E00FFD5F7 /* PBXTargetDependency */,
+			);
+			name = HoneyBeesTests;
+			productName = HoneyBeesTests;
+			productReference = 14D6FDB820C7B69E00FFD5F7 /* HoneyBeesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		14D6FDC220C7B69E00FFD5F7 /* HoneyBeesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14D6FDD220C7B69E00FFD5F7 /* Build configuration list for PBXNativeTarget "HoneyBeesUITests" */;
+			buildPhases = (
+				14D6FDBF20C7B69E00FFD5F7 /* Sources */,
+				14D6FDC020C7B69E00FFD5F7 /* Frameworks */,
+				14D6FDC120C7B69E00FFD5F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				14D6FDC520C7B69E00FFD5F7 /* PBXTargetDependency */,
+			);
+			name = HoneyBeesUITests;
+			productName = HoneyBeesUITests;
+			productReference = 14D6FDC320C7B69E00FFD5F7 /* HoneyBeesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		14D6FD9720C7B69D00FFD5F7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Ghadeer Abualrub";
+				TargetAttributes = {
+					14D6FD9E20C7B69E00FFD5F7 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					14D6FDB720C7B69E00FFD5F7 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 14D6FD9E20C7B69E00FFD5F7;
+					};
+					14D6FDC220C7B69E00FFD5F7 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 14D6FD9E20C7B69E00FFD5F7;
+					};
+				};
+			};
+			buildConfigurationList = 14D6FD9A20C7B69D00FFD5F7 /* Build configuration list for PBXProject "HoneyBees" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 14D6FD9620C7B69D00FFD5F7;
+			productRefGroup = 14D6FDA020C7B69E00FFD5F7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				14D6FD9E20C7B69E00FFD5F7 /* HoneyBees */,
+				14D6FDB720C7B69E00FFD5F7 /* HoneyBeesTests */,
+				14D6FDC220C7B69E00FFD5F7 /* HoneyBeesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		14D6FD9D20C7B69E00FFD5F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14DA4A2020D0FDCA004EB41B /* CustomTableViewCell.xib in Resources */,
+				1412464E20C7EB690008A9EF /* contact.png in Resources */,
+				1412464D20C7EB690008A9EF /* conversation.png in Resources */,
+				14D6FDE820C7BA3800FFD5F7 /* HoneyBees icon.png in Resources */,
+				14F4AF7C20C9426500254B44 /* Main.storyboard in Resources */,
+				1412464B20C7EB690008A9EF /* bubble.png in Resources */,
+				14D6FDDF20C7B71100FFD5F7 /* Info.plist in Resources */,
+				14D6FDB220C7B69E00FFD5F7 /* LaunchScreen.storyboard in Resources */,
+				14D6FDAF20C7B69E00FFD5F7 /* Assets.xcassets in Resources */,
+				1412464F20C7EB690008A9EF /* meeting.png in Resources */,
+				14EA432220C927F300190B7C /* ew.jpg in Resources */,
+				1412464020C7E31F0008A9EF /* Icon-32.png in Resources */,
+				1412464C20C7EB690008A9EF /* recent.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14D6FDB620C7B69E00FFD5F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14D6FDC120C7B69E00FFD5F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7A703953D0645C8D5319168A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HoneyBees/Pods-HoneyBees-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FCAlertView/FCAlertView.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FCAlertView.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HoneyBees/Pods-HoneyBees-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF6599DA092D7AFDB5F491A3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HoneyBees-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		14D6FD9B20C7B69E00FFD5F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1412465220C7EEFC0008A9EF /* ConversationTabsViewController.m in Sources */,
+				1412465520C7EF500008A9EF /* ConversatoinsViewController.m in Sources */,
+				1464877D20D132F00095A7F8 /* myViewController.m in Sources */,
+				14D6FDAA20C7B69E00FFD5F7 /* ViewController.m in Sources */,
+				14D6FDA720C7B69E00FFD5F7 /* AppDelegate.m in Sources */,
+				14D6FDA420C7B69E00FFD5F7 /* main.m in Sources */,
+				14DA4A1F20D0FDCA004EB41B /* CustomTableViewCell.m in Sources */,
+				14D6FDF120C7BDC000FFD5F7 /* LoginViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14D6FDB420C7B69E00FFD5F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14D6FDBD20C7B69E00FFD5F7 /* HoneyBeesTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14D6FDBF20C7B69E00FFD5F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14D6FDC820C7B69E00FFD5F7 /* HoneyBeesUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		14D6FDBA20C7B69E00FFD5F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14D6FD9E20C7B69E00FFD5F7 /* HoneyBees */;
+			targetProxy = 14D6FDB920C7B69E00FFD5F7 /* PBXContainerItemProxy */;
+		};
+		14D6FDC520C7B69E00FFD5F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14D6FD9E20C7B69E00FFD5F7 /* HoneyBees */;
+			targetProxy = 14D6FDC420C7B69E00FFD5F7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		14D6FDB020C7B69E00FFD5F7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14D6FDB120C7B69E00FFD5F7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		14D6FDCA20C7B69E00FFD5F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		14D6FDCB20C7B69E00FFD5F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		14D6FDCD20C7B69E00FFD5F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75470ABDD558916972829B06 /* Pods-HoneyBees.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = HoneyBees/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = asal.HoneyBees;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		14D6FDCE20C7B69E00FFD5F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB06BB71352797BB159C9DFA /* Pods-HoneyBees.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = HoneyBees/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = asal.HoneyBees;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		14D6FDD020C7B69E00FFD5F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HoneyBeesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = asal.HoneyBeesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HoneyBees.app/HoneyBees";
+			};
+			name = Debug;
+		};
+		14D6FDD120C7B69E00FFD5F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HoneyBeesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = asal.HoneyBeesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HoneyBees.app/HoneyBees";
+			};
+			name = Release;
+		};
+		14D6FDD320C7B69E00FFD5F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HoneyBeesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = asal.HoneyBeesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = HoneyBees;
+			};
+			name = Debug;
+		};
+		14D6FDD420C7B69E00FFD5F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HoneyBeesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = asal.HoneyBeesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = HoneyBees;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		14D6FD9A20C7B69D00FFD5F7 /* Build configuration list for PBXProject "HoneyBees" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14D6FDCA20C7B69E00FFD5F7 /* Debug */,
+				14D6FDCB20C7B69E00FFD5F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14D6FDCC20C7B69E00FFD5F7 /* Build configuration list for PBXNativeTarget "HoneyBees" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14D6FDCD20C7B69E00FFD5F7 /* Debug */,
+				14D6FDCE20C7B69E00FFD5F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14D6FDCF20C7B69E00FFD5F7 /* Build configuration list for PBXNativeTarget "HoneyBeesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14D6FDD020C7B69E00FFD5F7 /* Debug */,
+				14D6FDD120C7B69E00FFD5F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14D6FDD220C7B69E00FFD5F7 /* Build configuration list for PBXNativeTarget "HoneyBeesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14D6FDD320C7B69E00FFD5F7 /* Debug */,
+				14D6FDD420C7B69E00FFD5F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 14D6FD9720C7B69D00FFD5F7 /* Project object */;
+}
