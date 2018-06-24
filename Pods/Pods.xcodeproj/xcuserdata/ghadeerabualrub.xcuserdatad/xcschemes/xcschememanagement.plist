@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>FCAlertView-FCAlertView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FCAlertView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>HMAMessageViewManager.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-HoneyBees.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>1613271357771814C71601D90B787D94</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CD5F6C93A36774B53047062AF3A432A7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D72D12C772FEF0EDC6A12010F105F6CB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EF1ABE20DAA23760FBF0359740C1F0B9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

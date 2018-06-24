@@ -22,7 +22,7 @@
     self.ContactsArray = [ServicesManager sharedInstance].contactsManagerService.contacts;
     [[ServicesManager sharedInstance].contactsManagerService requestAddressBookAccess];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didAddContact:) name:kContactsManagerServiceDidAddContact object:nil];
-    
+    self.ContactsTable.allowsSelection = NO;
     self.ContactsTable.delegate = self;
     self.ContactsTable.dataSource = self;
 }
@@ -61,13 +61,10 @@
     
     Contact * contact = (Contact *)  [self.ContactsArray objectAtIndex:indexPath.row];
     cell.NameLabel.text = contact.fullName;
-    if(contact.isVisible){
-        cell.StatusLabel.text = @"Online";
-    }
-    else{
-        cell.StatusLabel.text = @"Offline";
-        cell.OnlineActivity.backgroundColor = [UIColor grayColor];
-    }
+    cell.StatusLabel.text = contact.presence.status;
+  
+    //UIImage* ProfilePic =[UIImage imageWithData:contact.photoData];
+    //cell.imageView.image = ProfilePic;
     return cell;
 }
 

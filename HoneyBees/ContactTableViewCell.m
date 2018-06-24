@@ -16,10 +16,12 @@
     self.OnlineActivity.layer.cornerRadius = self.OnlineActivity.frame.size.width/2;
     self.OnlineActivity.clipsToBounds = YES;
     self.OnlineActivity.layer.borderColor = [UIColor whiteColor].CGColor;
-    self.OnlineActivity.layer.borderWidth = 1.0 ;
+    self.OnlineActivity.layer.borderWidth = 2.5 ;
     
     self.imageView.layer.cornerRadius = 22.0;
     self.imageView.layer.masksToBounds = YES;
+    
+
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

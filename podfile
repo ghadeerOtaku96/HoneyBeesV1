@@ -1,0 +1,5 @@
+target ‘HoneyBees’ do 
+use_frameworks!
+pod 'FCAlertView’
+pod 'HMAMessageViewManager’
+end
