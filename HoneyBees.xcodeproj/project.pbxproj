@@ -15,6 +15,7 @@
 		1412464F20C7EB690008A9EF /* meeting.png in Resources */ = {isa = PBXBuildFile; fileRef = 1412464A20C7EB680008A9EF /* meeting.png */; };
 		1412465220C7EEFC0008A9EF /* ConversationTabsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1412465120C7EEFC0008A9EF /* ConversationTabsViewController.m */; };
 		1412465520C7EF500008A9EF /* ConversatoinsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1412465420C7EF500008A9EF /* ConversatoinsViewController.m */; };
+		144833D320DFDB6300341465 /* contact_details.png in Resources */ = {isa = PBXBuildFile; fileRef = 144833D220DFDB6300341465 /* contact_details.png */; };
 		1464877D20D132F00095A7F8 /* myViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1464877C20D132F00095A7F8 /* myViewController.m */; };
 		14D6FDA420C7B69E00FFD5F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D6FDA320C7B69E00FFD5F7 /* main.m */; };
 		14D6FDA720C7B69E00FFD5F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D6FDA620C7B69E00FFD5F7 /* AppDelegate.m */; };
@@ -85,6 +86,7 @@
 		1412465120C7EEFC0008A9EF /* ConversationTabsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationTabsViewController.m; sourceTree = "<group>"; };
 		1412465320C7EF500008A9EF /* ConversatoinsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversatoinsViewController.h; sourceTree = "<group>"; };
 		1412465420C7EF500008A9EF /* ConversatoinsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversatoinsViewController.m; sourceTree = "<group>"; };
+		144833D220DFDB6300341465 /* contact_details.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = contact_details.png; path = ../../contact_details.png; sourceTree = "<group>"; };
 		1464877B20D132F00095A7F8 /* myViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myViewController.h; sourceTree = "<group>"; };
 		1464877C20D132F00095A7F8 /* myViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myViewController.m; sourceTree = "<group>"; };
 		14D6FD9F20C7B69E00FFD5F7 /* HoneyBees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoneyBees.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,6 +157,7 @@
 		1412465620C7F05C0008A9EF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				144833D220DFDB6300341465 /* contact_details.png */,
 				14EA432120C927F300190B7C /* ew.jpg */,
 				1412464920C7EB680008A9EF /* contact.png */,
 				1412464A20C7EB680008A9EF /* meeting.png */,
@@ -406,6 +409,7 @@
 				1412464D20C7EB690008A9EF /* conversation.png in Resources */,
 				14D6FDE820C7BA3800FFD5F7 /* HoneyBees icon.png in Resources */,
 				14F4AF7C20C9426500254B44 /* Main.storyboard in Resources */,
+				144833D320DFDB6300341465 /* contact_details.png in Resources */,
 				1412464B20C7EB690008A9EF /* bubble.png in Resources */,
 				14D6FDDF20C7B71100FFD5F7 /* Info.plist in Resources */,
 				14D6FDB220C7B69E00FFD5F7 /* LaunchScreen.storyboard in Resources */,

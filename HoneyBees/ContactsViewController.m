@@ -63,6 +63,49 @@
     cell.NameLabel.text = contact.fullName;
     cell.StatusLabel.text = contact.presence.status;
   
+    switch (contact.presence.presence) {
+        case 0:
+            cell.OnlineActivity.backgroundColor = [UIColor grayColor];
+            cell.StatusLabel.text = @"Offline";
+            break;
+        case 1:
+            cell.OnlineActivity.backgroundColor = [UIColor greenColor];
+            cell.StatusLabel.text = @"Online";
+            break;
+        case 2:
+            cell.OnlineActivity.backgroundColor = [UIColor redColor];
+            cell.StatusLabel.text = @"Don't distrub";
+            break;
+        case 3:
+            cell.StatusLabel.text = @"Busy";
+            break;
+        case 4:
+            cell.OnlineActivity.backgroundColor = [UIColor orangeColor];
+            break;
+        case 5:
+            cell.StatusLabel.text = @"Invisible";
+        default:
+            break;
+    }
+    
+   
+    if (!contact.isInRoster && !contact.isRainbowUser && contact.sentInvitation.direction !=2){
+        [cell.DetailsButton setTitle:@"Invite+" forState:UIControlStateNormal];
+        [cell.DetailsButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    }
+    else if(!contact.isInRoster && !contact.isRainbowUser && contact.sentInvitation.direction ==2){
+        [cell.DetailsButton setTitle:@"Sent" forState:UIControlStateNormal];
+        [cell.DetailsButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+    }
+    else {
+      
+        [cell.DetailsButton setTitle:@"" forState:UIControlStateNormal];
+           // UIImage* CDetails = [[UIImage alloc]initWithContentsOfFile:@"contact_details.png"];
+          //  [cell.DetailsButton setBackgroundImage:CDetails forState:UIControlStateNormal];
+        [cell.DetailsButton setImage:[UIImage imageNamed:@"contact_details.png"] forState:UIControlStateNormal];
+        
+    }
+        
     //UIImage* ProfilePic =[UIImage imageWithData:contact.photoData];
     //cell.imageView.image = ProfilePic;
     return cell;

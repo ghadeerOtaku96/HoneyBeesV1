@@ -12,6 +12,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *ImageView;
 @property (strong, nonatomic) IBOutlet UILabel *NameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *StatusLabel;
+@property (strong, nonatomic) IBOutlet UIButton *DetailsButton;
 @property (strong, nonatomic) IBOutlet UILabel *OnlineActivity;
 
 @end
