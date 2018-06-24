@@ -145,7 +145,7 @@
             </objects>
             <point key="canvasLocation" x="-1239" y="-127"/>
         </scene>
-        <!--View Controller-->
+        <!--Bubbles -->
         <scene sceneID="9hs-Pz-iOf">
             <objects>
                 <viewController id="Ifx-St-srj" sceneMemberID="viewController">
@@ -158,7 +158,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="3r3-4v-x1y"/>
+                    <navigationItem key="navigationItem" title="Bubbles " id="3r3-4v-x1y"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YLc-gs-x4p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -196,7 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pcd-wR-tQE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="764" y="842"/>
+            <point key="canvasLocation" x="1703.2" y="841.52923538230891"/>
         </scene>
         <!--Recent-->
         <scene sceneID="lTC-TY-Gxb">
@@ -217,10 +217,10 @@
             </objects>
             <point key="canvasLocation" x="-817" y="842"/>
         </scene>
-        <!--Contacts-->
+        <!--Contacts -->
         <scene sceneID="wcG-lt-fic">
             <objects>
-                <viewController id="cJd-gr-Fm0" sceneMemberID="viewController">
+                <viewController id="cJd-gr-Fm0" customClass="ContactsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iHl-wM-Aig"/>
                         <viewControllerLayoutGuide type="bottom" id="Yi0-Xx-KGa"/>
@@ -228,13 +228,31 @@
                     <view key="view" contentMode="scaleToFill" id="mvr-hG-pRy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9hZ-RY-PBX">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="cJd-gr-Fm0" id="Oar-PL-o5s"/>
+                                    <outlet property="delegate" destination="cJd-gr-Fm0" id="9v0-3J-Fwe"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9hZ-RY-PBX" firstAttribute="bottom" secondItem="Yi0-Xx-KGa" secondAttribute="top" id="HL0-ys-2kk"/>
+                            <constraint firstItem="9hZ-RY-PBX" firstAttribute="leading" secondItem="mvr-hG-pRy" secondAttribute="leading" id="iDd-j2-6f2"/>
+                            <constraint firstItem="9hZ-RY-PBX" firstAttribute="centerX" secondItem="mvr-hG-pRy" secondAttribute="centerX" id="ykY-dw-pKA"/>
+                            <constraint firstItem="9hZ-RY-PBX" firstAttribute="top" secondItem="iHl-wM-Aig" secondAttribute="bottom" constant="-64" id="ym5-GZ-coS"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Contacts" image="contact.png" selectedImage="contact.png" id="UMk-TO-ItF"/>
+                    <navigationItem key="navigationItem" title="Contacts " id="cKW-4s-ANG"/>
+                    <connections>
+                        <outlet property="ContactsTable" destination="9hZ-RY-PBX" id="TpJ-b1-par"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tA4-aq-t6C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-10" y="842"/>
+            <point key="canvasLocation" x="928.79999999999995" y="841.52923538230891"/>
         </scene>
         <!--Conversations -->
         <scene sceneID="jWa-Sl-kv7">
@@ -256,7 +274,6 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstItem="pNx-eO-bv5" firstAttribute="top" secondItem="bw1-Re-FXM" secondAttribute="bottom" id="983-pR-enC"/>
                             <constraint firstItem="bw1-Re-FXM" firstAttribute="top" secondItem="PhX-N9-Zcp" secondAttribute="bottom" constant="-64" id="AAA-Ia-zev"/>
@@ -288,7 +305,7 @@
                         <segue destination="he7-7K-wQ3" kind="relationship" relationship="viewControllers" id="gHv-yP-jaH"/>
                         <segue destination="7ru-7i-kVH" kind="relationship" relationship="viewControllers" id="seQ-LK-9w8"/>
                         <segue destination="nfF-5V-2ei" kind="relationship" relationship="viewControllers" id="FLe-dI-6o0"/>
-                        <segue destination="cJd-gr-Fm0" kind="relationship" relationship="viewControllers" id="gy6-jF-5ov"/>
+                        <segue destination="gOg-DI-Lei" kind="relationship" relationship="viewControllers" id="gy6-jF-5ov"/>
                         <segue destination="0cw-5J-sF3" kind="relationship" relationship="viewControllers" id="PkW-rW-leB"/>
                     </connections>
                 </tabBarController>
@@ -351,6 +368,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CsT-jY-qrW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="764" y="-542"/>
+        </scene>
+        <!--Contacts-->
+        <scene sceneID="Q4K-cx-J5B">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gOg-DI-Lei" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Contacts" image="contact.png" selectedImage="contact.png" id="UMk-TO-ItF"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fGL-N1-jof">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cJd-gr-Fm0" kind="relationship" relationship="rootViewController" id="qfT-oA-H3X"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4dd-hV-wFN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-10.4" y="841.52923538230891"/>
         </scene>
     </scenes>
     <resources>

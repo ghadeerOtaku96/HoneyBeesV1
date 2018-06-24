@@ -16,7 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.conversationsArray  = [ServicesManager sharedInstance].conversationsManagerService.conversations;
+    self.conversationsArray = [ServicesManager sharedInstance].conversationsManagerService.conversations;
+    [[ServicesManager sharedInstance].contactsManagerService requestAddressBookAccess];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didAddContact:) name:kContactsManagerServiceDidAddContact object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didAddConversation:) name:kConversationsManagerDidAddConversation object:nil];
+    
     //self.conversationsArray = [[NSArray alloc]initWithObjects:@"red",@"black",@"blue", nil];
     self.ConversationTable.delegate = self;
     self.ConversationTable.dataSource = self;
@@ -36,10 +40,16 @@
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
- 
-    
-    
 
+}
+
+-(void)didAddConversation:(NSNotification*)notification{
+    NSLog(@"CONVERSATION");
+}
+
+-(void)didAddContact:(NSNotification*)notification{
+    //Contact *contact = (Contact *)notification.object;
+    NSLog(@"CONTACT");
 }
 
 
@@ -63,12 +73,15 @@
     }
     
     Conversation * conversation = (Conversation *)  [self.conversationsArray objectAtIndex:indexPath.row];
-    cell.NameLabel.text =  conversation.lastMessage.body;
-   // cell.DateLabel.text = [self.conversationsArray objectAtIndex:indexPath.row].autoContentAccessingProxy;
-    //cell.textLabel.text = (NSString*)[self.conversationsArray objectAtIndex:indexPath.row];
-    //cell.NameLabel.text = (NSString*)[self.conversationsArray objectAtIndex:indexPath.row];
+    
+    cell.NameLabel.text = conversation.peer.displayName;
+    cell.StatusLabel.text = conversation.lastMessage.body;
+    cell.DateLabel.text = (NSString*)conversation.lastUpdateDate;
     return cell;
 }
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 70;}
 
 -(void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];

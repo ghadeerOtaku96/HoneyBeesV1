@@ -24,8 +24,9 @@
     UIStoryboard* st1 = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     if(!CurrentUser.username){
         UIViewController* nextVC1 = [st1 instantiateViewControllerWithIdentifier:@"loginVC"];
-        //[self.navigationControll pushViewController:nextVC1 animated:true];
-        [self.window.rootViewController.navigationController pushViewController:nextVC1 animated:YES];}
+    //[self.navigationControll pushViewController:nextVC1 animated:true];
+        [self.window.rootViewController.navigationController pushViewController:nextVC1 animated:YES];
+    }
     else{
         UIViewController* nextVC1 = [st1 instantiateViewControllerWithIdentifier:@"nextVC"];
                 [self.window.rootViewController.navigationController pushViewController:nextVC1 animated:YES];}

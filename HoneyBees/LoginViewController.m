@@ -9,8 +9,10 @@
 #import "LoginViewController.h"
 #import <Rainbow/Rainbow.h>
 #import <FCAlertView/FCAlertView.h>
+#import <HMAMessageViewManager/HMAMessageViewManager.h>
 #import "ConversationTabsViewController.h"
 #import "myViewController.h"
+
 
 @interface LoginViewController ()
 
@@ -26,6 +28,20 @@
     self.password.delegate = self;
     self.loader.hidden = YES;
     self.scroll.scrollEnabled = NO;
+    
+    if([self isConnectToInternet] == YES){
+        NSLog(@"coneccted!!!");
+    }
+    else{
+        NSLog(@"not connected!!!");
+
+        [[HMAMessageViewManager sharedManager]
+         showMessageInController:self title:@"Oops!" subtitle:@"There is no internet connection!!" type:HMAMessageViewTypeWarning];
+        [[HMAMessageView appearance] setTitleFont:[UIFont boldSystemFontOfSize:12]];
+        [[HMAMessageView appearance] setSubtitleFont:[UIFont boldSystemFontOfSize:7]];
+        [[HMAMessageView appearance] setBackgroundColor:[UIColor redColor]];
+        [[HMAMessageView appearance] setHideMessagesAfterSeconds:@4];
+           }
     
     // Do any additional setup after loading the view.
 }
@@ -241,10 +257,46 @@
 
 }
 
+
 - (IBAction)createAccount:(UIButton *)sender {
     
 }
 
+//+ (void) registerAllRainbowNotifications {
+//    
+//    ContactsViewController * contactsViewController = [[ContactsViewController alloc]init];
+//    CallViewController     * callViewController     = [[CallViewController alloc]init];
+//    
+//    // Request Address Book Access
+//    [[ServicesManager sharedInstance].contactsManagerService requestAddressBookAccess];
+//    
+//    // Add Observer for Adding Contacts
+//    [[NSNotificationCenter defaultCenter] addObserver:contactsViewController selector:@selector(didAddContact:) name:kContactsManagerServiceDidAddContact object:nil];
+//    // Add Observers for Audio/Video Calls
+//    [[NSNotificationCenter defaultCenter] addObserver:callViewController selector:@selector(didCallSuccess:) name:kRTCServiceDidAddCallNotification object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:callViewController selector:@selector(didUpdateCall:) name:kRTCServiceDidUpdateCallNotification object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:callViewController selector:@selector(statusChanged:) name:kRTCServiceCallStatsNotification object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:callViewController selector:@selector(didRemoveCall:) name:kRTCServiceDidRemoveCallNotification object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:callViewController selector:@selector(didAllowMicrophone:) name:kRTCServiceDidAllowMicrophoneNotification object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:callViewController selector:@selector(didRefuseMicrophone:) name:kRTCServiceDidRefuseMicrophoneNotification object:nil];
+//    
+//}
+
+
+-(BOOL)isConnectToInternet{
+    
+    NSString *urlString = @"http://www.google.com/";
+    NSURL *url = [NSURL URLWithString:urlString];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    [request setHTTPMethod:@"HEAD"];
+    NSHTTPURLResponse *response;
+    
+    [NSURLConnection sendSynchronousRequest:request returningResponse:&response error: NULL];
+    
+ 
+    return ([response statusCode] == 200) ? YES : NO;
+    
+    }
 
 
 @end
