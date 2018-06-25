@@ -18,7 +18,7 @@
     self.OnlineActivity.layer.borderColor = [UIColor whiteColor].CGColor;
     self.OnlineActivity.layer.borderWidth = 2.5 ;
     
-    self.imageView.layer.cornerRadius = 22.0;
+    self.imageView.layer.cornerRadius = self.imageView.frame.size.width/2;
     self.imageView.layer.masksToBounds = YES;
     
 

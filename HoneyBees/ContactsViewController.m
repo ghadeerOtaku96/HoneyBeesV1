@@ -62,7 +62,13 @@
     Contact * contact = (Contact *)  [self.ContactsArray objectAtIndex:indexPath.row];
     cell.NameLabel.text = contact.fullName;
     cell.StatusLabel.text = contact.presence.status;
+    
+    //UIImage* ProfilePic =[UIImage imageWithData:contact.photoData];
+    //cell.imageView.image = ProfilePic;
+    cell.imageView.layer.cornerRadius = cell.imageView.frame.size.width/2;
+    cell.imageView.layer.masksToBounds = YES;
   
+    
     switch (contact.presence.presence) {
         case 0:
             cell.OnlineActivity.backgroundColor = [UIColor grayColor];
@@ -81,6 +87,7 @@
             break;
         case 4:
             cell.OnlineActivity.backgroundColor = [UIColor orangeColor];
+            cell.StatusLabel.text = @"Away";
             break;
         case 5:
             cell.StatusLabel.text = @"Invisible";
@@ -88,26 +95,24 @@
             break;
     }
     
-   
+   dispatch_async(dispatch_get_main_queue(), ^{
+    if(contact.isInRoster) {
+           
+        [cell.DetailsButton setTitle:@"" forState:UIControlStateNormal];
+        [cell.DetailsButton setImage:[UIImage imageNamed:@"contact_details.png"] forState:UIControlStateNormal];
+    }
     if (!contact.isInRoster && !contact.isRainbowUser && contact.sentInvitation.direction !=2){
         [cell.DetailsButton setTitle:@"Invite+" forState:UIControlStateNormal];
         [cell.DetailsButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
     }
-    else if(!contact.isInRoster && !contact.isRainbowUser && contact.sentInvitation.direction ==2){
+    if(!contact.isInRoster && !contact.isRainbowUser && contact.sentInvitation.direction ==2){
         [cell.DetailsButton setTitle:@"Sent" forState:UIControlStateNormal];
         [cell.DetailsButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
     }
-    else {
-      
-        [cell.DetailsButton setTitle:@"" forState:UIControlStateNormal];
-           // UIImage* CDetails = [[UIImage alloc]initWithContentsOfFile:@"contact_details.png"];
-          //  [cell.DetailsButton setBackgroundImage:CDetails forState:UIControlStateNormal];
-        [cell.DetailsButton setImage:[UIImage imageNamed:@"contact_details.png"] forState:UIControlStateNormal];
+   });
         
-    }
-        
-    //UIImage* ProfilePic =[UIImage imageWithData:contact.photoData];
-    //cell.imageView.image = ProfilePic;
+
+    
     return cell;
 }
 
