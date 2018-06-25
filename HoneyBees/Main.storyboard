@@ -148,7 +148,7 @@
         <!--Bubbles -->
         <scene sceneID="9hs-Pz-iOf">
             <objects>
-                <viewController id="Ifx-St-srj" sceneMemberID="viewController">
+                <viewController id="Ifx-St-srj" customClass="BubblesViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ueO-LX-HQs"/>
                         <viewControllerLayoutGuide type="bottom" id="E16-cP-uqy"/>
@@ -156,13 +156,28 @@
                     <view key="view" contentMode="scaleToFill" id="CcI-KY-KWb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ew.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="dEo-8c-LZQ">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="8H0-KO-hBA"/>
+                                    <constraint firstAttribute="height" constant="160" id="zNg-qV-GUR"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dEo-8c-LZQ" firstAttribute="top" secondItem="ueO-LX-HQs" secondAttribute="bottom" constant="133" id="hdT-h7-AIr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dEo-8c-LZQ" secondAttribute="trailing" constant="120" id="oFY-G7-KbM"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Bubbles " id="3r3-4v-x1y"/>
+                    <connections>
+                        <outlet property="image" destination="dEo-8c-LZQ" id="O3m-Mf-UIY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YLc-gs-x4p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1598" y="170"/>
+            <point key="canvasLocation" x="1597.5999999999999" y="169.56521739130437"/>
         </scene>
         <!--Meeting-->
         <scene sceneID="2Pb-Ie-Np5">
@@ -394,6 +409,7 @@
         <image name="bubble.png" width="30" height="30"/>
         <image name="contact.png" width="30" height="30"/>
         <image name="conversation.png" width="30" height="30"/>
+        <image name="ew.jpg" width="256" height="256"/>
         <image name="meeting.png" width="30" height="30"/>
         <image name="recent.png" width="30" height="30"/>
     </resources>

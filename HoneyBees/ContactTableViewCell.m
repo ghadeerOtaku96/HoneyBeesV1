@@ -16,12 +16,20 @@
     self.OnlineActivity.layer.cornerRadius = self.OnlineActivity.frame.size.width/2;
     self.OnlineActivity.clipsToBounds = YES;
     self.OnlineActivity.layer.borderColor = [UIColor whiteColor].CGColor;
-    self.OnlineActivity.layer.borderWidth = 2.5 ;
-    
-    self.imageView.layer.cornerRadius = self.imageView.frame.size.width/2;
-    self.imageView.layer.masksToBounds = YES;
+    self.OnlineActivity.layer.borderWidth = 3 ;
     
 
+//    self.imageView.layer.opaque = false;
+//    self.imageView.layer.cornerRadius = self.imageView.frame.size.width/2;
+//    self.imageView.layer.masksToBounds = true;
+//    
+
+
+    
+
+}
+- (IBAction)showContactDetails:(UIButton *)sender {
+    NSLog(@"GHADEER");
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

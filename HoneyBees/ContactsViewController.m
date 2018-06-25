@@ -63,11 +63,6 @@
     cell.NameLabel.text = contact.fullName;
     cell.StatusLabel.text = contact.presence.status;
     
-    //UIImage* ProfilePic =[UIImage imageWithData:contact.photoData];
-    //cell.imageView.image = ProfilePic;
-    cell.imageView.layer.cornerRadius = cell.imageView.frame.size.width/2;
-    cell.imageView.layer.masksToBounds = YES;
-  
     
     switch (contact.presence.presence) {
         case 0:
@@ -99,7 +94,7 @@
     if(contact.isInRoster) {
            
         [cell.DetailsButton setTitle:@"" forState:UIControlStateNormal];
-        [cell.DetailsButton setImage:[UIImage imageNamed:@"contact_details.png"] forState:UIControlStateNormal];
+        [cell.DetailsButton setImage:[UIImage imageNamed:@"contacts_details.png"] forState:UIControlStateNormal];
     }
     if (!contact.isInRoster && !contact.isRainbowUser && contact.sentInvitation.direction !=2){
         [cell.DetailsButton setTitle:@"Invite+" forState:UIControlStateNormal];
@@ -109,6 +104,10 @@
         [cell.DetailsButton setTitle:@"Sent" forState:UIControlStateNormal];
         [cell.DetailsButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
     }
+       UIImage* ProfilePic =[UIImage imageWithData:contact.photoData];
+       cell.imageView.image = ProfilePic;
+       cell.imageView.layer.cornerRadius = cell.imageView.frame.size.width/2;
+       cell.imageView.layer.masksToBounds = true;
    });
         
 
