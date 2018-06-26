@@ -179,6 +179,46 @@
             </objects>
             <point key="canvasLocation" x="1597.5999999999999" y="169.56521739130437"/>
         </scene>
+        <!--Cnt Details View Controller-->
+        <scene sceneID="d8p-Lu-y1a">
+            <objects>
+                <viewController restorationIdentifier="CntD" storyboardIdentifier="CntD" id="Lot-4R-jQ8" customClass="CntDetailsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FfN-B2-O2u"/>
+                        <viewControllerLayoutGuide type="bottom" id="iXZ-je-U1A"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="T7U-X6-S7X">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOZ-vw-LRx">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pps-rT-Zv2"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IOZ-vw-LRx" firstAttribute="top" secondItem="pps-rT-Zv2" secondAttribute="bottom" constant="17" id="6Tq-T2-mz1"/>
+                            <constraint firstItem="pps-rT-Zv2" firstAttribute="width" secondItem="T7U-X6-S7X" secondAttribute="width" multiplier="2:3" constant="-122" id="6b2-Sj-bQH"/>
+                            <constraint firstItem="iXZ-je-U1A" firstAttribute="top" secondItem="IOZ-vw-LRx" secondAttribute="bottom" constant="221" id="6qq-hE-ShC"/>
+                            <constraint firstItem="pps-rT-Zv2" firstAttribute="height" secondItem="T7U-X6-S7X" secondAttribute="width" multiplier="2:3" constant="-122" id="KV6-Gk-6tc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IOZ-vw-LRx" secondAttribute="trailing" id="Qxd-T0-VwH"/>
+                            <constraint firstItem="IOZ-vw-LRx" firstAttribute="top" secondItem="FfN-B2-O2u" secondAttribute="bottom" constant="224" id="c36-Am-hb8"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="IOZ-vw-LRx" secondAttribute="leading" id="p8l-OT-Z9H"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="pps-rT-Zv2" secondAttribute="leading" id="rjA-fe-jXY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ContactDetails" destination="IOZ-vw-LRx" id="hdu-hz-YqH"/>
+                        <outlet property="ContactImage" destination="pps-rT-Zv2" id="Lbs-TL-uDC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5bx-ni-73s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2351" y="141"/>
+        </scene>
         <!--Meeting-->
         <scene sceneID="2Pb-Ie-Np5">
             <objects>
@@ -235,7 +275,7 @@
         <!--Contacts -->
         <scene sceneID="wcG-lt-fic">
             <objects>
-                <viewController id="cJd-gr-Fm0" customClass="ContactsViewController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="contacts" storyboardIdentifier="contacts" id="cJd-gr-Fm0" customClass="ContactsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iHl-wM-Aig"/>
                         <viewControllerLayoutGuide type="bottom" id="Yi0-Xx-KGa"/>

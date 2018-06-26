@@ -9,6 +9,7 @@
 #import "ContactsViewController.h"
 #import <Rainbow/Rainbow.h>
 #import "ContactTableViewCell.h"
+#import "CntDetailsViewController.h"
 @interface ContactsViewController () <UITableViewDelegate , UITableViewDataSource>
 
 @end
@@ -53,6 +54,7 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
     ContactTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"mycell"];
     if(!cell){
         [tableView registerNib:[UINib nibWithNibName:@"ContactTableViewCell" bundle:nil] forCellReuseIdentifier:@"mycell"];
@@ -60,8 +62,22 @@
     }
     
     Contact * contact = (Contact *)  [self.ContactsArray objectAtIndex:indexPath.row];
+    
     cell.NameLabel.text = contact.fullName;
     cell.StatusLabel.text = contact.presence.status;
+    
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [cell.OnlineActivity bringSubviewToFront:cell.imageView];
+        UIImage* ProfilePic =[UIImage imageWithData:contact.photoData];
+        //UIImage* ProfilePic = [UIImage imageNamed:@"ew.jpg"];
+        //cell.imageView.contentMode = UIViewContentModeScaleAspectFit;
+        cell.imageView.image = ProfilePic;
+        cell.imageView.layer.cornerRadius = cell.imageView.frame.size.width/2;
+        cell.imageView.layer.masksToBounds = true;
+    });
+    
+
     
     
     switch (contact.presence.presence) {
@@ -78,6 +94,7 @@
             cell.StatusLabel.text = @"Don't distrub";
             break;
         case 3:
+            cell.OnlineActivity.backgroundColor = [UIColor blueColor];
             cell.StatusLabel.text = @"Busy";
             break;
         case 4:
@@ -87,36 +104,56 @@
         case 5:
             cell.StatusLabel.text = @"Invisible";
         default:
+            cell.OnlineActivity.backgroundColor = [UIColor grayColor];
+            cell.StatusLabel.text = @"Offline";
             break;
     }
     
-   dispatch_async(dispatch_get_main_queue(), ^{
-    if(contact.isInRoster) {
+    if(contact.isRainbowUser) {
            
-        [cell.DetailsButton setTitle:@"" forState:UIControlStateNormal];
+        //[cell.DetailsButton setTitle:@"" forState:UIControlStateNormal];
         [cell.DetailsButton setImage:[UIImage imageNamed:@"contacts_details.png"] forState:UIControlStateNormal];
+        cell.DetailsButton.contentMode = UIViewContentModeScaleAspectFit;
+        cell.DetailsButton.enabled = YES;
+        if(cell.DetailsButton.isSelected){
+            [cell.DetailsButton addTarget:self action:@selector(showDetails:) forControlEvents:UIControlEventTouchUpInside];
+            cell.DetailsButton.tag = indexPath.row;
+            
+        }
     }
     if (!contact.isInRoster && !contact.isRainbowUser && contact.sentInvitation.direction !=2){
-        [cell.DetailsButton setTitle:@"Invite+" forState:UIControlStateNormal];
+        //[cell.DetailsButton setTitle:@"Invite+" forState:UIControlStateNormal];
+        [cell.DetailsButton setImage:[UIImage imageNamed:@"invite.png"] forState:UIControlStateNormal];
+        cell.DetailsButton.contentMode = UIViewContentModeScaleAspectFit;
         [cell.DetailsButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+        cell.DetailsButton.enabled = YES;
     }
     if(!contact.isInRoster && !contact.isRainbowUser && contact.sentInvitation.direction ==2){
-        [cell.DetailsButton setTitle:@"Sent" forState:UIControlStateNormal];
         [cell.DetailsButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        [cell.DetailsButton setTitle:@"Sent" forState:UIControlStateNormal];
+        cell.DetailsButton.enabled = NO;
     }
-       UIImage* ProfilePic =[UIImage imageWithData:contact.photoData];
-       cell.imageView.image = ProfilePic;
-       cell.imageView.layer.cornerRadius = cell.imageView.frame.size.width/2;
-       cell.imageView.layer.masksToBounds = true;
-   });
-        
 
+    
+ 
     
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-   return 70;}
+    return 68;}
+//////////////////////////////////////////////////////
+-(void)showDetails:(id)sender{
+    dispatch_async(dispatch_get_main_queue(), ^{
+    UIStoryboard* st = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    CntDetailsViewController* nextVC = (CntDetailsViewController *)[st instantiateViewControllerWithIdentifier:@"CntD"];
+
+    Contact* cnt = [self.ContactsArray objectAtIndex:[sender tag]];
+    nextVC.contact = cnt;
+        
+    [self presentViewController:nextVC animated:YES completion:nil];
+    });
+}
 
 
 /*

@@ -7,7 +7,9 @@
 //
 
 #import "ContactTableViewCell.h"
+#import "CntDetailsViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import <Rainbow/Rainbow.h>
 @implementation ContactTableViewCell
 
 - (void)awakeFromNib {
@@ -18,19 +20,15 @@
     self.OnlineActivity.layer.borderColor = [UIColor whiteColor].CGColor;
     self.OnlineActivity.layer.borderWidth = 3 ;
     
-
-//    self.imageView.layer.opaque = false;
-//    self.imageView.layer.cornerRadius = self.imageView.frame.size.width/2;
-//    self.imageView.layer.masksToBounds = true;
-//    
-
-
-    
+//    [self.imageView bringSubviewToFront:self.OnlineActivity];
 
 }
-- (IBAction)showContactDetails:(UIButton *)sender {
-    NSLog(@"GHADEER");
-}
+
+//- (IBAction)showDetails:(id)sender {
+//}
+
+
+
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
