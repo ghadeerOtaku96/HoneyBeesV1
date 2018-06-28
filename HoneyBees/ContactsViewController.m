@@ -54,30 +54,28 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    Contact * contact = (Contact *)  [self.ContactsArray objectAtIndex:indexPath.row];
     ContactTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"mycell"];
     if(!cell){
         [tableView registerNib:[UINib nibWithNibName:@"ContactTableViewCell" bundle:nil] forCellReuseIdentifier:@"mycell"];
         cell = [tableView dequeueReusableCellWithIdentifier:@"mycell"];
     }
-    
-    Contact * contact = (Contact *)  [self.ContactsArray objectAtIndex:indexPath.row];
-    
+    cell.contact = contact;
+    cell.ContactVC = self;
     cell.NameLabel.text = contact.fullName;
     cell.StatusLabel.text = contact.presence.status;
     
-    
     dispatch_async(dispatch_get_main_queue(), ^{
-        [cell.OnlineActivity bringSubviewToFront:cell.imageView];
+      
         UIImage* ProfilePic =[UIImage imageWithData:contact.photoData];
-        //UIImage* ProfilePic = [UIImage imageNamed:@"ew.jpg"];
-        //cell.imageView.contentMode = UIViewContentModeScaleAspectFit;
+        if(contact.photoData == nil)
+            ProfilePic = [UIImage imageNamed:@"ew.jpg"];
         cell.imageView.image = ProfilePic;
         cell.imageView.layer.cornerRadius = cell.imageView.frame.size.width/2;
         cell.imageView.layer.masksToBounds = true;
-    });
+      
     
-
+    
     
     
     switch (contact.presence.presence) {
@@ -108,10 +106,9 @@
             cell.StatusLabel.text = @"Offline";
             break;
     }
-    
-    if(contact.isRainbowUser) {
-           
-        //[cell.DetailsButton setTitle:@"" forState:UIControlStateNormal];
+   
+    if(contact.isInRoster) {
+
         [cell.DetailsButton setImage:[UIImage imageNamed:@"contacts_details.png"] forState:UIControlStateNormal];
         cell.DetailsButton.contentMode = UIViewContentModeScaleAspectFit;
         cell.DetailsButton.enabled = YES;
@@ -122,38 +119,27 @@
         }
     }
     if (!contact.isInRoster && !contact.isRainbowUser && contact.sentInvitation.direction !=2){
-        //[cell.DetailsButton setTitle:@"Invite+" forState:UIControlStateNormal];
         [cell.DetailsButton setImage:[UIImage imageNamed:@"invite.png"] forState:UIControlStateNormal];
         cell.DetailsButton.contentMode = UIViewContentModeScaleAspectFit;
         [cell.DetailsButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
         cell.DetailsButton.enabled = YES;
     }
     if(!contact.isInRoster && !contact.isRainbowUser && contact.sentInvitation.direction ==2){
-        [cell.DetailsButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-        [cell.DetailsButton setTitle:@"Sent" forState:UIControlStateNormal];
+        [cell.DetailsButton setImage:[UIImage imageNamed:@"sent.png"] forState:UIControlStateNormal];
         cell.DetailsButton.enabled = NO;
     }
+        
 
-    
+    });
  
-    
+    cell.contact = contact;
+    cell.ContactVC = self;
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 68;}
-//////////////////////////////////////////////////////
--(void)showDetails:(id)sender{
-    dispatch_async(dispatch_get_main_queue(), ^{
-    UIStoryboard* st = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    CntDetailsViewController* nextVC = (CntDetailsViewController *)[st instantiateViewControllerWithIdentifier:@"CntD"];
 
-    Contact* cnt = [self.ContactsArray objectAtIndex:[sender tag]];
-    nextVC.contact = cnt;
-        
-    [self presentViewController:nextVC animated:YES completion:nil];
-    });
-}
 
 
 /*

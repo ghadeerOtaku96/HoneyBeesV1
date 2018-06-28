@@ -19,6 +19,8 @@
 		147CBABE20E0D7C700DBE362 /* contacts_details.png in Resources */ = {isa = PBXBuildFile; fileRef = 147CBABD20E0D7C700DBE362 /* contacts_details.png */; };
 		147CBAC220E0ED4200DBE362 /* BubblesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147CBAC120E0ED4200DBE362 /* BubblesViewController.m */; };
 		147CBACE20E10F5C00DBE362 /* CntDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147CBACC20E10F5C00DBE362 /* CntDetailsViewController.m */; };
+		14CBB65220E4C1E1003BDD43 /* sent.png in Resources */ = {isa = PBXBuildFile; fileRef = 14CBB65120E4C1E1003BDD43 /* sent.png */; };
+		14CBB65620E4CC2E003BDD43 /* nil.png in Resources */ = {isa = PBXBuildFile; fileRef = 14CBB65520E4CC2E003BDD43 /* nil.png */; };
 		14D6FDA420C7B69E00FFD5F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D6FDA320C7B69E00FFD5F7 /* main.m */; };
 		14D6FDA720C7B69E00FFD5F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D6FDA620C7B69E00FFD5F7 /* AppDelegate.m */; };
 		14D6FDAA20C7B69E00FFD5F7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D6FDA920C7B69E00FFD5F7 /* ViewController.m */; };
@@ -96,6 +98,8 @@
 		147CBAC120E0ED4200DBE362 /* BubblesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubblesViewController.m; sourceTree = "<group>"; };
 		147CBACB20E10F5C00DBE362 /* CntDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CntDetailsViewController.h; sourceTree = "<group>"; };
 		147CBACC20E10F5C00DBE362 /* CntDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CntDetailsViewController.m; sourceTree = "<group>"; };
+		14CBB65120E4C1E1003BDD43 /* sent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sent.png; path = ../../../Downloads/sent.png; sourceTree = "<group>"; };
+		14CBB65520E4CC2E003BDD43 /* nil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nil.png; path = ../../nil.png; sourceTree = "<group>"; };
 		14D6FD9F20C7B69E00FFD5F7 /* HoneyBees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoneyBees.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14D6FDA320C7B69E00FFD5F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		14D6FDA520C7B69E00FFD5F7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -166,6 +170,8 @@
 			isa = PBXGroup;
 			children = (
 				14F7F04320E25F92003316F5 /* invite.png */,
+				14CBB65120E4C1E1003BDD43 /* sent.png */,
+				14CBB65520E4CC2E003BDD43 /* nil.png */,
 				14EA432120C927F300190B7C /* ew.jpg */,
 				147CBABD20E0D7C700DBE362 /* contacts_details.png */,
 				1412464920C7EB680008A9EF /* contact.png */,
@@ -425,7 +431,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				14DA4A2020D0FDCA004EB41B /* CustomTableViewCell.xib in Resources */,
+				14CBB65220E4C1E1003BDD43 /* sent.png in Resources */,
 				1412464E20C7EB690008A9EF /* contact.png in Resources */,
+				14CBB65620E4CC2E003BDD43 /* nil.png in Resources */,
 				14E520F620DF2DE5001E8B6D /* ContactTableViewCell.xib in Resources */,
 				1412464D20C7EB690008A9EF /* conversation.png in Resources */,
 				14D6FDE820C7BA3800FFD5F7 /* HoneyBees icon.png in Resources */,

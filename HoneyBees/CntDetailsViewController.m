@@ -25,18 +25,19 @@
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
-    dispatch_sync(dispatch_get_main_queue(), ^{
+    dispatch_async(dispatch_get_main_queue(), ^{
         
         UIImage* img = [UIImage imageWithData:self.contact.photoData];
         self.ContactImage.image = img;
         self.ContactImage.layer.cornerRadius = self.ContactImage.frame.size.width/2;
         self.ContactImage.layer.masksToBounds = true;
-   
-        self.ContactDetails.text = self.contact.fullName ;
-        
-        
+
+});
+//self.InfoLabel.text = self.contact.fullName;
+    NSString* str = [NSString stringWithFormat:@"%@\n%@\n%@",self.contact.fullName,self.contact.jobTitle,self.contact.companyName];
+    self.InfoLabel.text = str;
     
-    });
+
 }
 
 -(void)didGetInfo:(NSNotification*) notification{

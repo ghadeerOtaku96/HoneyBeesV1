@@ -11,7 +11,8 @@
 @interface CntDetailsViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UIImageView *ContactImage;
-@property (strong, nonatomic) IBOutlet UILabel *ContactDetails;
 @property (strong, nonatomic) Contact* contact;
+@property (strong, nonatomic) IBOutlet UILabel *InfoLabel;
+
 
 @end
