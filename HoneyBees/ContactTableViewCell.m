@@ -12,20 +12,6 @@
 @implementation ContactTableViewCell
 
 
-
-
--(id)initWithContact:(Contact*)cnt{
-    self = [super init];
-    if(self){
-        self.contact = cnt;
-        [self awakeFromNib];
-    }
-    
-    return self;
-}
-
-
-
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
@@ -116,7 +102,8 @@
        
         UIImage* sent = [UIImage imageNamed:@"sent.png"];
         [sender setImage:sent forState:UIControlStateNormal];
-        sender.enabled = false;
+        sender.enabled = NO;
+        NSString * name = self.contact.fullName;
        
     }
     

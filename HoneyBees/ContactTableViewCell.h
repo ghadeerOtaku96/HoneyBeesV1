@@ -21,5 +21,4 @@
 
 - (IBAction)showDetails:(UIButton *)sender;
 
--(id)initWithContact:(Contact*)cnt;
 @end

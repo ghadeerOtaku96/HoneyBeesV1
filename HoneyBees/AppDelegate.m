@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "LoginViewController.h"
+#import "ConversationTabsViewController.h"
 #import <Rainbow/Rainbow.h>
 
 //#import <Rainbow/Rainbow.h>
@@ -20,16 +22,25 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    MyUser* CurrentUser = [[ServicesManager sharedInstance]myUser];
     UIStoryboard* st1 = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    if(!CurrentUser.username){
-        UIViewController* nextVC1 = [st1 instantiateViewControllerWithIdentifier:@"loginVC"];
-    //[self.navigationControll pushViewController:nextVC1 animated:true];
+    NSUserDefaults* user = [NSUserDefaults standardUserDefaults];
+    
+    if(!user){
+        dispatch_async(dispatch_get_main_queue(), ^{
+        LoginViewController* nextVC1 = [st1 instantiateViewControllerWithIdentifier:@"loginVC"];
+   
+            [self.window.rootViewController.navigationController pushViewController:nextVC1 animated:YES];});
+    }
+    if([user objectForKey:@"currentUser"] && [user objectForKey:@"currentPassword"] ){
+        NSLog(@"eeeuser%@%@", [user objectForKey:@"currentUser"], [user objectForKey:@"currentPassword"]);
+        // login stratigy
+        
+        [[ServicesManager sharedInstance].loginManager setUsername:[user objectForKey:@"currentUser"] andPassword:[user objectForKey:@"currentPassword"]];
+        [[ServicesManager sharedInstance].loginManager connect];
+        ConversationTabsViewController* nextVC1 = [st1 instantiateViewControllerWithIdentifier:@"nextVC"];
         [self.window.rootViewController.navigationController pushViewController:nextVC1 animated:YES];
     }
-    else{
-        UIViewController* nextVC1 = [st1 instantiateViewControllerWithIdentifier:@"nextVC"];
-                [self.window.rootViewController.navigationController pushViewController:nextVC1 animated:YES];}
+
     return YES;
 }
 
@@ -43,6 +54,7 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+
 }
 
 
@@ -57,7 +69,7 @@
 
 
 - (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+//     Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
 

@@ -15,11 +15,10 @@
     
     self.OnlineActivity.layer.cornerRadius = self.OnlineActivity.frame.size.width/2;
     self.OnlineActivity.clipsToBounds = YES;
-    self.OnlineActivity.layer.borderColor = (__bridge CGColorRef _Nullable)([UIColor whiteColor]);
+    self.OnlineActivity.layer.borderColor = [UIColor whiteColor].CGColor;
     self.OnlineActivity.layer.borderWidth =1.0 ;
     
-    self.imageView.layer.cornerRadius = self.imageView.frame.size.width/2;
-    self.imageView.clipsToBounds = YES;
+  
     
     // Initialization code
 }

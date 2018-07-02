@@ -20,8 +20,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    self.ContactsArray = [ServicesManager sharedInstance].contactsManagerService.contacts;
-    [[ServicesManager sharedInstance].contactsManagerService requestAddressBookAccess];
+    //self.ContactsArray =
+    
+    NSArray * array =  [ServicesManager sharedInstance].contactsManagerService.contacts;
+    self.ContactsArray = [NSMutableArray arrayWithArray:array];
+//    for (Contact * contact in array) {
+//        if(contact.isRainbowUser &&
+//           ![self.ContactsArray containsObject:contact]  && contact.fullName != [ServicesManager sharedInstance].myUser.username){
+//            [self.ContactsArray addObject:contact];
+//        }
+//    }
+    
+//    [[ServicesManager sharedInstance].contactsManagerService requestAddressBookAccess];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didAddContact:) name:kContactsManagerServiceDidAddContact object:nil];
     self.ContactsTable.allowsSelection = NO;
     self.ContactsTable.delegate = self;
@@ -36,8 +47,14 @@
 
 -(void)didAddContact:(NSNotification*)notification{
     Contact *contact = (Contact *)notification.object;
-    [self.ContactsArray addObject:contact];
-    NSLog(@"CONTACT");
+        if(contact.isRainbowUser &&
+           ![self.ContactsArray containsObject:contact]  && contact.displayName != [ServicesManager sharedInstance].myUser.username ){
+            [self.ContactsArray addObject:contact];
+        
+    }
+    
+    
+    NSLog(@"CONTACT is %@",[contact displayName]);
 }
 
 

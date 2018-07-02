@@ -23,12 +23,13 @@
 #pragma mark - Application LifeCycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.DEfaultStore = [NSUserDefaults standardUserDefaults];
+
     self.email.delegate = self;
     self.password.delegate = self;
     self.loader.hidden = YES;
     self.scroll.scrollEnabled = NO;
     
+  
     if([self isConnectToInternet] == YES){
         NSLog(@"coneccted!!!");
     }
@@ -170,7 +171,7 @@
 
 - (IBAction)login:(UIButton *)sender {
 // some animations when the login button is pressed
-    do{
+        do{
     dispatch_async(dispatch_get_main_queue(), ^{
        
         [sender setTitle:@"" forState:UIControlStateNormal];
@@ -185,10 +186,8 @@
     });}while(0);
 
 // login stratigy
-    
-    [self.DEfaultStore setObject:self.email.text forKey:@"Email"];
-    [self.DEfaultStore setObject:self.password.text forKey:@"Password"];
-    [self.DEfaultStore synchronize];
+ 
+    self.loginButton.selected = YES;
     [[ServicesManager sharedInstance].loginManager setUsername:self.email.text andPassword:self.password.text];
     [[ServicesManager sharedInstance].loginManager connect];
 
@@ -198,7 +197,17 @@
 
 
 //what to do when the login succeeded
--(void) didLogin:(NSNotification *) notification { NSLog(@"DID LOGIN");
+-(void) didLogin:(NSNotification *) notification {
+    NSLog(@"DID LOGIN");
+    
+    // save user login data in NSUserDefault
+    self.user = [NSUserDefaults standardUserDefaults];
+    if(self.user){
+        [self.user setObject:[ServicesManager sharedInstance].myUser.username forKey:@"currentUser"];
+        [self.user setObject:self.password.text forKey:@"currentPassword"];
+        [self.user synchronize];
+    }
+
 // stop the Activity Indicator
         dispatch_async(dispatch_get_main_queue(), ^{
     [self.loader stopAnimating];});
@@ -208,12 +217,14 @@
     ConversationTabsViewController* nextVC = (ConversationTabsViewController *)[st instantiateViewControllerWithIdentifier:@"nextVC"];
     [self presentViewController:nextVC animated:YES completion:nil];
     
+    
 }
 
 
 // what to do when the login failed
+
 -(void) didFailedToLogin:(NSNotificationCenter *)notification{ NSLog(@"FAILED TO LOGIN");
-    
+    if([self.loginButton isSelected]){
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.loader stopAnimating];
         self.loader.hidden = YES;
@@ -253,7 +264,7 @@
         
     
     });
-    
+    }
 
 }
 

@@ -17,7 +17,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *forgetButton;
 @property (strong, nonatomic) IBOutlet UIButton *loginButton;
 
-@property (strong, nonatomic) NSUserDefaults* DEfaultStore;
+@property (strong, nonatomic) NSUserDefaults *user;
 
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *loader;
 
