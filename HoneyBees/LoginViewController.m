@@ -194,8 +194,6 @@
 }
 
 
-
-
 //what to do when the login succeeded
 -(void) didLogin:(NSNotification *) notification {
     NSLog(@"DID LOGIN");
@@ -210,13 +208,13 @@
 
 // stop the Activity Indicator
         dispatch_async(dispatch_get_main_queue(), ^{
-    [self.loader stopAnimating];});
+    [self.loader stopAnimating];
 // go to the next ViewController
 
     UIStoryboard* st = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     ConversationTabsViewController* nextVC = (ConversationTabsViewController *)[st instantiateViewControllerWithIdentifier:@"nextVC"];
     [self presentViewController:nextVC animated:YES completion:nil];
-    
+    });
     
 }
 

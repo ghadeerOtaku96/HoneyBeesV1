@@ -24,8 +24,8 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didAddConversation:) name:kConversationsManagerDidAddConversation object:nil];
 
-    self.ConversationTable.delegate = self;
-    self.ConversationTable.dataSource = self;
+    self.ConversationsTable.delegate = self;
+    self.ConversationsTable.dataSource = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,43 +46,40 @@
     //NSArray* array =  [ServicesManager sharedInstance].conversationsManagerService.conversations;
     //self.conversationsArray = [NSMutableArray arrayWithArray:array];
     Conversation * conversation = (Conversation *)notification.object;
-    NSLog(@"test1%@",conversation.lastMessage.body);
     [self.conversationsArray addObject:conversation];
-    
-      //self.conversationsArray = [ServicesManager sharedInstance].conversationsManagerService.conversations;
-
-    //   [self.conversationsArray addObject:conversation];
-    //NSLog(@"CONVERSATION %@",conversation.lastMessage.body);
-    
+    NSLog(@"test1%@",conversation.lastMessage.body);
+    NSLog(@"test2 %lu",(unsigned long)self.conversationsArray.count);
 }
 
 
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
-}
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    NSLog(@"test2 %lu",(unsigned long)self.conversationsArray.count);
     return self.conversationsArray.count;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [self.ConversationTable deselectRowAtIndexPath:indexPath animated:YES];
+    [self.ConversationsTable deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+
     CustomTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"convcell"];
     if(!cell){
         [tableView registerNib:[UINib nibWithNibName:@"CustomTableViewCell" bundle:nil] forCellReuseIdentifier:@"convcell"];
         cell = [tableView dequeueReusableCellWithIdentifier:@"convcell"];
     }
     
-    Conversation * conversation = (Conversation *)  [self.conversationsArray objectAtIndex:indexPath.row];
+    //Conversation * conversation = (Conversation *)  [self.conversationsArray objectAtIndex:indexPath.row];
     
-    
-    cell.NameLabel.text = conversation.peer.displayName;
-    cell.StatusLabel.text = conversation.lastMessage.body;
-    cell.DateLabel.text = (NSString*)conversation.lastUpdateDate;
+    cell.NameLabel.text = @"Alaa";
+    cell.textLabel.text = @"ghadeer";
+    cell.StatusLabel.text = @"hello";
+    cell.DateLabel.text =@"31/06/18";
+//    cell.NameLabel.text = conversation.peer.displayName;
+//    cell.StatusLabel.text = conversation.lastMessage.body;
+//    cell.DateLabel.text = (NSString*)conversation.lastUpdateDate;
     
     dispatch_async(dispatch_get_main_queue(), ^{
         cell.imageView.layer.cornerRadius = cell.imageView.frame.size.width/2;
@@ -98,7 +95,6 @@
 
 -(void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    
     
 }
 

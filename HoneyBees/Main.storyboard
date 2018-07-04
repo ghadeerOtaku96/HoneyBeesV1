@@ -163,6 +163,14 @@
                                     <constraint firstAttribute="height" constant="160" id="zNg-qV-GUR"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvX-Hl-D3f">
+                                <frame key="frameInset" minX="108" minY="400" width="103" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="chat:" destination="Ifx-St-srj" eventType="touchUpInside" id="VKa-Vl-u4s"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -172,14 +180,15 @@
                     </view>
                     <navigationItem key="navigationItem" title="Bubbles " id="3r3-4v-x1y"/>
                     <connections>
+                        <outlet property="chatButton" destination="dvX-Hl-D3f" id="E8H-Ab-Vth"/>
                         <outlet property="image" destination="dEo-8c-LZQ" id="O3m-Mf-UIY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YLc-gs-x4p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1591" y="184"/>
+            <point key="canvasLocation" x="1589.5999999999999" y="183.95802098950526"/>
         </scene>
-        <!--Cnt Details View Controller-->
+        <!--Contact Information-->
         <scene sceneID="d8p-Lu-y1a">
             <objects>
                 <viewController restorationIdentifier="CntD" storyboardIdentifier="CntD" id="Lot-4R-jQ8" customClass="CntDetailsViewController" sceneMemberID="viewController">
@@ -208,14 +217,23 @@
                             <constraint firstAttribute="leadingMargin" secondItem="pps-rT-Zv2" secondAttribute="leading" id="rjA-fe-jXY"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Contact Information" id="IXS-jY-q38">
+                        <barButtonItem key="backBarButtonItem" title="back " id="lhi-z7-Mz1"/>
+                        <barButtonItem key="leftBarButtonItem" image="back.png" id="S9K-aW-grc">
+                            <connections>
+                                <action selector="back:" destination="Lot-4R-jQ8" id="xIK-3s-7ni"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="ContactImage" destination="pps-rT-Zv2" id="Lbs-TL-uDC"/>
                         <outlet property="InfoLabel" destination="Qe0-n4-FXU" id="l3i-5J-15I"/>
+                        <outlet property="backButton" destination="S9K-aW-grc" id="Kir-lN-yUH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5bx-ni-73s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1401" y="842"/>
+            <point key="canvasLocation" x="2111" y="842"/>
         </scene>
         <!--Meeting-->
         <scene sceneID="2Pb-Ie-Np5">
@@ -249,7 +267,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pcd-wR-tQE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3078" y="842"/>
+            <point key="canvasLocation" x="4016.8000000000002" y="841.52923538230891"/>
         </scene>
         <!--Recent-->
         <scene sceneID="lTC-TY-Gxb">
@@ -321,6 +339,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="o4w-Eb-bdj">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" red="0.87052112817764282" green="0.87062597274780273" blue="0.87048560380935669" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Exw-DP-S35" id="oWB-lZ-JVO"/>
                                     <outlet property="delegate" destination="Exw-DP-S35" id="7tF-X8-rtI"/>
@@ -338,12 +357,90 @@
                     </view>
                     <navigationItem key="navigationItem" title="Conversations" id="9f9-mA-3fk"/>
                     <connections>
-                        <outlet property="ConversationTable" destination="o4w-Eb-bdj" id="niG-1e-bgl"/>
+                        <outlet property="ConversationsTable" destination="o4w-Eb-bdj" id="lIE-sE-9Xf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Pc-Sn-hv7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1590" y="-517"/>
+        </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="9oe-op-esL">
+            <objects>
+                <viewController restorationIdentifier="chatVC" storyboardIdentifier="chatVC" id="sBh-H4-8uU" customClass="ChatViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vyt-uP-2Cu"/>
+                        <viewControllerLayoutGuide type="bottom" id="e0E-WM-04n"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Sm3-Up-nho">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Naa-i3-Glx">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="sBh-H4-8uU" id="ZlF-Rv-Ile"/>
+                                    <outlet property="delegate" destination="sBh-H4-8uU" id="Cdt-lS-3Jg"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rIa-rM-zEZ">
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message ..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iBu-OW-6cF">
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="sBh-H4-8uU" id="jAQ-Sk-F0n"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gg7-ET-FT1">
+                                        <state key="normal" image="send.png">
+                                            <color key="titleColor" red="0.0" green="0.74581807851791382" blue="0.93024939298629761" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sendMessage:" destination="sBh-H4-8uU" eventType="touchUpInside" id="4Qz-2o-3Im"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="gg7-ET-FT1" firstAttribute="top" secondItem="rIa-rM-zEZ" secondAttribute="top" constant="14" id="3T9-mG-voF"/>
+                                    <constraint firstAttribute="bottom" secondItem="iBu-OW-6cF" secondAttribute="bottom" constant="19" id="I7V-wx-PyR"/>
+                                    <constraint firstAttribute="bottom" secondItem="gg7-ET-FT1" secondAttribute="bottom" constant="13" id="Jeb-Qd-S7p"/>
+                                    <constraint firstAttribute="trailing" secondItem="gg7-ET-FT1" secondAttribute="trailing" constant="8" id="U4q-LX-wJ0"/>
+                                    <constraint firstItem="iBu-OW-6cF" firstAttribute="top" secondItem="rIa-rM-zEZ" secondAttribute="top" constant="19" id="eX5-Ea-qn1"/>
+                                    <constraint firstItem="iBu-OW-6cF" firstAttribute="leading" secondItem="rIa-rM-zEZ" secondAttribute="leading" constant="8" id="hSY-ij-PPH"/>
+                                    <constraint firstAttribute="trailing" secondItem="iBu-OW-6cF" secondAttribute="trailing" constant="69" id="vhq-lJ-RG2"/>
+                                    <constraint firstItem="gg7-ET-FT1" firstAttribute="leading" secondItem="iBu-OW-6cF" secondAttribute="trailing" constant="8" id="wRv-Wg-kVU"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rIa-rM-zEZ" firstAttribute="top" secondItem="Naa-i3-Glx" secondAttribute="bottom" constant="-77" id="6tn-dO-99k"/>
+                            <constraint firstAttribute="trailing" secondItem="Naa-i3-Glx" secondAttribute="trailing" id="7tq-nP-ibS"/>
+                            <constraint firstItem="Naa-i3-Glx" firstAttribute="top" secondItem="Vyt-uP-2Cu" secondAttribute="bottom" constant="-64" id="E9S-09-ezt"/>
+                            <constraint firstItem="rIa-rM-zEZ" firstAttribute="leading" secondItem="Sm3-Up-nho" secondAttribute="leading" id="IcD-Gq-UfN"/>
+                            <constraint firstItem="e0E-WM-04n" firstAttribute="top" secondItem="rIa-rM-zEZ" secondAttribute="bottom" id="PIm-38-Mer"/>
+                            <constraint firstItem="Naa-i3-Glx" firstAttribute="leading" secondItem="Sm3-Up-nho" secondAttribute="leading" id="YhU-pY-jJf"/>
+                            <constraint firstItem="e0E-WM-04n" firstAttribute="top" secondItem="Naa-i3-Glx" secondAttribute="bottom" id="gYQ-Vb-hhb"/>
+                            <constraint firstAttribute="trailing" secondItem="rIa-rM-zEZ" secondAttribute="trailing" id="l04-3u-bmu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="hU9-fs-ReF">
+                        <barButtonItem key="leftBarButtonItem" image="back.png" id="tYp-M4-cG0"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="chatText" destination="iBu-OW-6cF" id="UiT-C1-Kzk"/>
+                        <outlet property="chattingTable" destination="Naa-i3-Glx" id="DvJ-s4-8KN"/>
+                        <outlet property="messageFieldView" destination="rIa-rM-zEZ" id="70g-6g-uBl"/>
+                        <outlet property="msgViewHeightConstraint" destination="I7V-wx-PyR" id="TtR-6I-KrG"/>
+                        <outlet property="sendButton" destination="gg7-ET-FT1" id="Ydw-iw-jHo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ml2-BC-aZb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3088.8000000000002" y="-517.6911544227886"/>
         </scene>
         <!--Conversation Tabs View Controller-->
         <scene sceneID="tfK-AN-4dd">
@@ -424,15 +521,53 @@
             </objects>
             <point key="canvasLocation" x="764" y="-516"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oFk-wr-riG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iCu-sP-EZn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ooB-Hh-5rE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Lot-4R-jQ8" kind="relationship" relationship="rootViewController" id="UXs-n4-PQR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0En-5O-RBA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1400.8" y="841.52923538230891"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3Gk-Rb-cyC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KEJ-FG-75Z" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ilf-cE-dsP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sBh-H4-8uU" kind="relationship" relationship="rootViewController" id="U2p-nz-EXr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r9A-ue-9gd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2369" y="-517"/>
+        </scene>
     </scenes>
     <resources>
         <image name="HoneyBees icon.png" width="234" height="237"/>
+        <image name="back.png" width="26" height="26"/>
         <image name="bubble.png" width="30" height="30"/>
         <image name="contact.png" width="30" height="30"/>
         <image name="conversation.png" width="30" height="30"/>
         <image name="ew.jpg" width="256" height="256"/>
         <image name="meeting.png" width="30" height="30"/>
         <image name="recent.png" width="30" height="30"/>
+        <image name="send.png" width="50" height="50"/>
     </resources>
     <color key="tintColor" red="0.0" green="0.74969363209999995" blue="0.93417423960000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

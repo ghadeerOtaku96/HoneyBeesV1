@@ -14,5 +14,6 @@
 @property (strong, nonatomic) Contact* contact;
 @property (strong, nonatomic) IBOutlet UILabel *InfoLabel;
 
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *backButton;
 
 @end

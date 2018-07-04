@@ -18,8 +18,8 @@
     [super viewDidLoad];
 
        [[ServicesManager sharedInstance].contactsManagerService fetchRemoteContactDetail:self.contact];
-       [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didGetInfo:) name:kContactsManagerServiceDidChangeContactDisplayUserSettings object:nil];
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didGetInfo:) name:kContactsManagerServiceDidChangeContactDisplayUserSettings object:nil];
+    self.navigationItem.leftBarButtonItem = self.backButton;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -27,17 +27,22 @@
     [super viewWillAppear:animated];
     dispatch_async(dispatch_get_main_queue(), ^{
         
-        UIImage* img = [UIImage imageWithData:self.contact.photoData];
+               UIImage* img = [UIImage imageWithData:self.contact.photoData];
         self.ContactImage.image = img;
         self.ContactImage.layer.cornerRadius = self.ContactImage.frame.size.width/2;
         self.ContactImage.layer.masksToBounds = true;
 
 });
 //self.InfoLabel.text = self.contact.fullName;
+
+
     NSString* str = [NSString stringWithFormat:@"%@\n%@\n%@",self.contact.fullName,self.contact.jobTitle,self.contact.companyName];
     self.InfoLabel.text = str;
     
 
+}
+- (IBAction)back:(UIBarButtonItem *)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void)didGetInfo:(NSNotification*) notification{
