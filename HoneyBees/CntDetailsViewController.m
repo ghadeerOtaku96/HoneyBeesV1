@@ -42,7 +42,7 @@
 
 }
 - (IBAction)back:(UIBarButtonItem *)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(void)didGetInfo:(NSNotification*) notification{

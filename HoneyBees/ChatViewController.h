@@ -13,7 +13,8 @@
 @property (strong, nonatomic) IBOutlet UIView *messageFieldView;
 @property (strong, nonatomic) IBOutlet UITextField *chatText;
 @property (strong, nonatomic) IBOutlet UIButton *sendButton;
-@property (strong, nonatomic) IBOutlet NSLayoutConstraint *msgViewHeightConstraint;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *backButton;
+
 
 
 @end

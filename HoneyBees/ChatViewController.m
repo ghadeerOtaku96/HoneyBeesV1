@@ -7,10 +7,12 @@
 //
 
 #import "ChatViewController.h"
-#import "ChatTableViewCell.h"
+
+#import "OutgoingTableViewCell.h"
 #import <Rainbow/Rainbow.h>
 @interface ChatViewController ()<UITableViewDelegate , UITableViewDataSource , UITextFieldDelegate>
 
+@property (nonatomic) float cellHeight;
 @end
 
 @implementation ChatViewController
@@ -19,7 +21,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 //    self.chatText.delegate = self;
-//    [self.chatText resignFirstResponder];
+
     self.chattingTable.delegate = self;
     self.chattingTable.dataSource = self;
     self.chattingTable.allowsSelection = NO;
@@ -67,30 +69,48 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    ChatTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"chatCell"];
+    OutgoingTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"sentCell"];
     if(!cell){
-        [tableView registerNib:[UINib nibWithNibName:@"ChatTableViewCell" bundle:nil] forCellReuseIdentifier:@"chatCell"];
-        cell = [tableView dequeueReusableCellWithIdentifier:@"chatCell"];
+        [tableView registerNib:[UINib nibWithNibName:@"OutgoingTableViewCell" bundle:nil] forCellReuseIdentifier:@"sentCell"];
+        cell = [tableView dequeueReusableCellWithIdentifier:@"sentCell"];
     }
-    cell.nameLabel.text = @"alaa";
-    cell.messageBody.text = @"Hellolwkrijgkerkjghkjdfsghlkjdfhkdjfgljdflkfgdkfjghdkjfhgkdfjhgkdjfhgdkfjjldsknfubekjfjpslmddjuunpsknjdufhijdnsbhfowkmndhfns,dmlkjops;omsjkd;a[jsndmnlsd]jdnskdjfl;so]dfkskj";
+    cell.layer.cornerRadius = 15;
+    cell.clipsToBounds = YES;
+      cell.messageBody.text = @"Hellolwkrijgkerkjghkjdfsghlkjdfhkdjfgljdflkfgdkfjghdkjfhgkdfjhgkdjfhgdkfjjldsknfubekjfjpslmddjuunpsknjdufhijdnsbhfowkmndhfns,dmlkjops;omsjkd;a[jsndmnlsd]jdnskdjfl;so]dfkskj";
+    NSString* str = @"Hellolwkrijgkerkjghkjdfsghlkjdfhkdjfgljdflkfgdkfjghdkjfhgkdfjhgkdjfhgdkfjjldsknfubekjfjpslmddjuunpsknjdufhijdnsbhfowkmndhfns,dmlkjops;omsjkd;a[jsndmnlsd]jdnskdjfl;so]dfkskj";
+    cell.messageBody.lineBreakMode = NSLineBreakByTruncatingTail;
+    cell.messageBody.numberOfLines=0;
+    
+
+    cell.msgDate.text = @"2-03-18";
+    
+    /* Check Content Size and Set Height */
+//    CGRect msgFrame = [cell.messageBody.text boundingRectWithSize:CGSizeMake(240.f, CGFLOAT_MAX) options:(NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading) attributes:@{NSFontAttributeName:[UIFont fontWithName:@"" size:14.0f]} context:nil];
+//   
+//   self.requiredSize = msgFrame.size;
+//CGSize textSize = [[str getALongText]
+//                       sizeWithFont:[UIFont boldSystemFontOfSize:15]
+//                       constrainedToSize:CGSizeMake(maxWidth, 2000)
+//                       lineBreakMode:UILineBreakModeWordWrap];
+    self.cellHeight = cell.messageBody.frame.size.height + cell.msgDate.frame.size.height ;
 
 
-    dispatch_async(dispatch_get_main_queue(), ^{
-        cell.avatar.layer.cornerRadius = cell.avatar.frame.size.width/2;
-        cell.avatar.layer.masksToBounds = YES;
-        CGRect frame = cell.messageBody.frame;
-        frame.size.height = cell.messageBody.contentSize.height;
-        frame.size.width = cell.messageBody.contentSize.width;
-        cell.messageBody.frame = frame;
-    });
+
+    
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 68;}
+    return 150 ;
+}
+//- (CGFloat):(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    return self.cellHeight;
+//}
 
 - (IBAction)sendMessage:(UIButton *)sender {
+}
+- (IBAction)back:(UIBarButtonItem *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 /*

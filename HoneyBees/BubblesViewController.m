@@ -36,7 +36,8 @@
     dispatch_async(dispatch_get_main_queue(), ^{
     UIStoryboard* st = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     ChatViewController* nextVC = (ChatViewController *)[st instantiateViewControllerWithIdentifier:@"chatVC"];
-        [self presentViewController:nextVC animated:YES completion:nil];});
+        [self.navigationController pushViewController:nextVC animated:YES];
+    });
 }
 
 

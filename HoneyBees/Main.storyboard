@@ -218,7 +218,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Contact Information" id="IXS-jY-q38">
-                        <barButtonItem key="backBarButtonItem" title="back " id="lhi-z7-Mz1"/>
                         <barButtonItem key="leftBarButtonItem" image="back.png" id="S9K-aW-grc">
                             <connections>
                                 <action selector="back:" destination="Lot-4R-jQ8" id="xIK-3s-7ni"/>
@@ -337,7 +336,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="o4w-Eb-bdj">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="o4w-Eb-bdj">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" red="0.87052112817764282" green="0.87062597274780273" blue="0.87048560380935669" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
@@ -367,7 +366,7 @@
         <!--Chat View Controller-->
         <scene sceneID="9oe-op-esL">
             <objects>
-                <viewController restorationIdentifier="chatVC" storyboardIdentifier="chatVC" id="sBh-H4-8uU" customClass="ChatViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="chatVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sBh-H4-8uU" customClass="ChatViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Vyt-uP-2Cu"/>
                         <viewControllerLayoutGuide type="bottom" id="e0E-WM-04n"/>
@@ -405,7 +404,6 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="gg7-ET-FT1" firstAttribute="top" secondItem="rIa-rM-zEZ" secondAttribute="top" constant="14" id="3T9-mG-voF"/>
-                                    <constraint firstAttribute="bottom" secondItem="iBu-OW-6cF" secondAttribute="bottom" constant="19" id="I7V-wx-PyR"/>
                                     <constraint firstAttribute="bottom" secondItem="gg7-ET-FT1" secondAttribute="bottom" constant="13" id="Jeb-Qd-S7p"/>
                                     <constraint firstAttribute="trailing" secondItem="gg7-ET-FT1" secondAttribute="trailing" constant="8" id="U4q-LX-wJ0"/>
                                     <constraint firstItem="iBu-OW-6cF" firstAttribute="top" secondItem="rIa-rM-zEZ" secondAttribute="top" constant="19" id="eX5-Ea-qn1"/>
@@ -428,13 +426,17 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hU9-fs-ReF">
-                        <barButtonItem key="leftBarButtonItem" image="back.png" id="tYp-M4-cG0"/>
+                        <barButtonItem key="leftBarButtonItem" image="back.png" id="tYp-M4-cG0">
+                            <connections>
+                                <action selector="back:" destination="sBh-H4-8uU" id="Aep-FM-PI2"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="backButton" destination="tYp-M4-cG0" id="3pU-Xu-siS"/>
                         <outlet property="chatText" destination="iBu-OW-6cF" id="UiT-C1-Kzk"/>
                         <outlet property="chattingTable" destination="Naa-i3-Glx" id="DvJ-s4-8KN"/>
                         <outlet property="messageFieldView" destination="rIa-rM-zEZ" id="70g-6g-uBl"/>
-                        <outlet property="msgViewHeightConstraint" destination="I7V-wx-PyR" id="TtR-6I-KrG"/>
                         <outlet property="sendButton" destination="gg7-ET-FT1" id="Ydw-iw-jHo"/>
                     </connections>
                 </viewController>
@@ -542,7 +544,7 @@
         <!--Navigation Controller-->
         <scene sceneID="3Gk-Rb-cyC">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KEJ-FG-75Z" sceneMemberID="viewController">
+                <navigationController restorationIdentifier="navChat" storyboardIdentifier="navChat" automaticallyAdjustsScrollViewInsets="NO" id="KEJ-FG-75Z" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ilf-cE-dsP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -559,7 +561,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="HoneyBees icon.png" width="234" height="237"/>
+        <image name="HoneyBees icon.png" width="32" height="32"/>
         <image name="back.png" width="26" height="26"/>
         <image name="bubble.png" width="30" height="30"/>
         <image name="contact.png" width="30" height="30"/>

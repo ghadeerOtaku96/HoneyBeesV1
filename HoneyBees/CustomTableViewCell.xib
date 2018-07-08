@@ -18,7 +18,7 @@
                 <frame key="frameInset" width="320" height="67"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ew.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="NkC-SA-m8W"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NkC-SA-m8W"/>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDe-q6-QAB">
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <nil key="textColor"/>
@@ -38,7 +38,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OP7-6T-bJs">
-                        <frame key="frameInset" minX="62.5" minY="40.5" width="20" height="20"/>
+                        <frame key="frameInset" minX="62" minY="40" width="20" height="20"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.2282300605872036" green="0.90225074404761907" blue="0.3635070633473752" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -49,12 +49,12 @@
                 <constraints>
                     <constraint firstItem="sCX-fs-i1R" firstAttribute="leading" secondItem="NkC-SA-m8W" secondAttribute="trailing" constant="25" id="42g-ik-DVB"/>
                     <constraint firstItem="lDe-q6-QAB" firstAttribute="leading" secondItem="NkC-SA-m8W" secondAttribute="trailing" constant="25" id="Cwf-A5-DCx"/>
-                    <constraint firstAttribute="bottom" secondItem="sCX-fs-i1R" secondAttribute="bottom" id="LC9-w9-Dg6"/>
                     <constraint firstItem="NkC-SA-m8W" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="1:10" constant="25.5" id="O0e-9s-chw"/>
                     <constraint firstItem="Iov-6z-tiU" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="OHh-JH-aP0"/>
                     <constraint firstItem="lDe-q6-QAB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="Ukc-8z-jYn"/>
                     <constraint firstItem="NkC-SA-m8W" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="WTb-vk-XGa"/>
                     <constraint firstItem="sCX-fs-i1R" firstAttribute="top" secondItem="lDe-q6-QAB" secondAttribute="bottom" constant="7" id="aaG-N3-tZ9"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="sCX-fs-i1R" secondAttribute="bottom" constant="4.5" id="hjI-eL-hNw"/>
                     <constraint firstItem="Iov-6z-tiU" firstAttribute="leading" secondItem="lDe-q6-QAB" secondAttribute="trailing" constant="41" id="jFx-Vr-j9T"/>
                     <constraint firstItem="sCX-fs-i1R" firstAttribute="top" secondItem="lDe-q6-QAB" secondAttribute="bottom" constant="7" id="jOh-DF-nPy"/>
                     <constraint firstAttribute="bottomMargin" secondItem="Iov-6z-tiU" secondAttribute="bottom" constant="17" id="jaC-Co-SWi"/>
@@ -68,12 +68,10 @@
                 <outlet property="DateLabel" destination="Iov-6z-tiU" id="mGc-1z-sar"/>
                 <outlet property="ImageView" destination="NkC-SA-m8W" id="VuF-IE-ezg"/>
                 <outlet property="NameLabel" destination="lDe-q6-QAB" id="HPJ-Qw-VSf"/>
+                <outlet property="OnlineActivity" destination="OP7-6T-bJs" id="Qza-bl-DW3"/>
                 <outlet property="StatusLabel" destination="sCX-fs-i1R" id="aFw-sO-bvD"/>
             </connections>
             <point key="canvasLocation" x="87" y="101"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="ew.jpg" width="256" height="256"/>
-    </resources>
 </document>

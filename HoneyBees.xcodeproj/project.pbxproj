@@ -7,25 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1412464020C7E31F0008A9EF /* Icon-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 1412463F20C7E31F0008A9EF /* Icon-32.png */; };
-		1412464B20C7EB690008A9EF /* bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 1412464620C7EB680008A9EF /* bubble.png */; };
-		1412464C20C7EB690008A9EF /* recent.png in Resources */ = {isa = PBXBuildFile; fileRef = 1412464720C7EB680008A9EF /* recent.png */; };
-		1412464D20C7EB690008A9EF /* conversation.png in Resources */ = {isa = PBXBuildFile; fileRef = 1412464820C7EB680008A9EF /* conversation.png */; };
-		1412464E20C7EB690008A9EF /* contact.png in Resources */ = {isa = PBXBuildFile; fileRef = 1412464920C7EB680008A9EF /* contact.png */; };
-		1412464F20C7EB690008A9EF /* meeting.png in Resources */ = {isa = PBXBuildFile; fileRef = 1412464A20C7EB680008A9EF /* meeting.png */; };
 		1412465220C7EEFC0008A9EF /* ConversationTabsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1412465120C7EEFC0008A9EF /* ConversationTabsViewController.m */; };
 		1464877D20D132F00095A7F8 /* myViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1464877C20D132F00095A7F8 /* myViewController.m */; };
-		147CBABE20E0D7C700DBE362 /* contacts_details.png in Resources */ = {isa = PBXBuildFile; fileRef = 147CBABD20E0D7C700DBE362 /* contacts_details.png */; };
 		147CBAC220E0ED4200DBE362 /* BubblesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147CBAC120E0ED4200DBE362 /* BubblesViewController.m */; };
 		147CBACE20E10F5C00DBE362 /* CntDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147CBACC20E10F5C00DBE362 /* CntDetailsViewController.m */; };
 		14B2B44620E8AD0300C9FF7E /* ConversationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B2B44520E8AD0300C9FF7E /* ConversationViewController.m */; };
+		14B826D820ECF047000275E4 /* IncomingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B826D620ECF047000275E4 /* IncomingTableViewCell.m */; };
+		14B826D920ECF047000275E4 /* IncomingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14B826D720ECF047000275E4 /* IncomingTableViewCell.xib */; };
+		14B826DD20ECF05F000275E4 /* OutgoingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B826DB20ECF05F000275E4 /* OutgoingTableViewCell.m */; };
+		14B826DE20ECF05F000275E4 /* OutgoingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14B826DC20ECF05F000275E4 /* OutgoingTableViewCell.xib */; };
 		14C886A820EA578900FA1318 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C886A720EA578900FA1318 /* ChatViewController.m */; };
-		14C886AB20EA5ED500FA1318 /* send.png in Resources */ = {isa = PBXBuildFile; fileRef = 14C886A920EA5ED500FA1318 /* send.png */; };
-		14C886AE20EA609D00FA1318 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 14C886AD20EA609D00FA1318 /* back.png */; };
 		14C886B220EA612A00FA1318 /* ChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C886B020EA612A00FA1318 /* ChatTableViewCell.m */; };
 		14C886B320EA612A00FA1318 /* ChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14C886B120EA612A00FA1318 /* ChatTableViewCell.xib */; };
-		14CBB65220E4C1E1003BDD43 /* sent.png in Resources */ = {isa = PBXBuildFile; fileRef = 14CBB65120E4C1E1003BDD43 /* sent.png */; };
-		14CBB65620E4CC2E003BDD43 /* nil.png in Resources */ = {isa = PBXBuildFile; fileRef = 14CBB65520E4CC2E003BDD43 /* nil.png */; };
 		14D6FDA420C7B69E00FFD5F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D6FDA320C7B69E00FFD5F7 /* main.m */; };
 		14D6FDA720C7B69E00FFD5F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D6FDA620C7B69E00FFD5F7 /* AppDelegate.m */; };
 		14D6FDAA20C7B69E00FFD5F7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D6FDA920C7B69E00FFD5F7 /* ViewController.m */; };
@@ -40,16 +33,13 @@
 		14D6FDDB20C7B6E200FFD5F7 /* WebRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D6FDD620C7B6CF00FFD5F7 /* WebRTC.framework */; };
 		14D6FDDC20C7B6E200FFD5F7 /* WebRTC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 14D6FDD620C7B6CF00FFD5F7 /* WebRTC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		14D6FDDF20C7B71100FFD5F7 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14D6FDDE20C7B71100FFD5F7 /* Info.plist */; };
-		14D6FDE820C7BA3800FFD5F7 /* HoneyBees icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 14D6FDE720C7BA3800FFD5F7 /* HoneyBees icon.png */; };
 		14D6FDF120C7BDC000FFD5F7 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D6FDF020C7BDC000FFD5F7 /* LoginViewController.m */; };
 		14DA4A1F20D0FDCA004EB41B /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14DA4A1D20D0FDCA004EB41B /* CustomTableViewCell.m */; };
 		14DA4A2020D0FDCA004EB41B /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14DA4A1E20D0FDCA004EB41B /* CustomTableViewCell.xib */; };
 		14E520F120DF281D001E8B6D /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E520F020DF281D001E8B6D /* ContactsViewController.m */; };
 		14E520F520DF2DE5001E8B6D /* ContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E520F320DF2DE5001E8B6D /* ContactTableViewCell.m */; };
 		14E520F620DF2DE5001E8B6D /* ContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14E520F420DF2DE5001E8B6D /* ContactTableViewCell.xib */; };
-		14EA432220C927F300190B7C /* ew.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 14EA432120C927F300190B7C /* ew.jpg */; };
 		14F4AF7C20C9426500254B44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14F4AF7B20C9426500254B44 /* Main.storyboard */; };
-		14F7F04420E25F92003316F5 /* invite.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F7F04320E25F92003316F5 /* invite.png */; };
 		ECE227C7C1209F32073F6023 /* Pods_HoneyBees.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CAFB0D33A08AD43225F4773 /* Pods_HoneyBees.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,32 +76,27 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1412463F20C7E31F0008A9EF /* Icon-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-32.png"; sourceTree = "<group>"; };
-		1412464620C7EB680008A9EF /* bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubble.png; sourceTree = "<group>"; };
-		1412464720C7EB680008A9EF /* recent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recent.png; sourceTree = "<group>"; };
-		1412464820C7EB680008A9EF /* conversation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = conversation.png; sourceTree = "<group>"; };
-		1412464920C7EB680008A9EF /* contact.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contact.png; sourceTree = "<group>"; };
-		1412464A20C7EB680008A9EF /* meeting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meeting.png; sourceTree = "<group>"; };
 		1412465020C7EEFC0008A9EF /* ConversationTabsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationTabsViewController.h; sourceTree = "<group>"; };
 		1412465120C7EEFC0008A9EF /* ConversationTabsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationTabsViewController.m; sourceTree = "<group>"; };
 		1464877B20D132F00095A7F8 /* myViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myViewController.h; sourceTree = "<group>"; };
 		1464877C20D132F00095A7F8 /* myViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myViewController.m; sourceTree = "<group>"; };
-		147CBABD20E0D7C700DBE362 /* contacts_details.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = contacts_details.png; path = ../../../Downloads/contacts_details.png; sourceTree = "<group>"; };
 		147CBAC020E0ED4200DBE362 /* BubblesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubblesViewController.h; sourceTree = "<group>"; };
 		147CBAC120E0ED4200DBE362 /* BubblesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubblesViewController.m; sourceTree = "<group>"; };
 		147CBACB20E10F5C00DBE362 /* CntDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CntDetailsViewController.h; sourceTree = "<group>"; };
 		147CBACC20E10F5C00DBE362 /* CntDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CntDetailsViewController.m; sourceTree = "<group>"; };
 		14B2B44420E8AD0300C9FF7E /* ConversationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationViewController.h; sourceTree = "<group>"; };
 		14B2B44520E8AD0300C9FF7E /* ConversationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationViewController.m; sourceTree = "<group>"; };
+		14B826D520ECF047000275E4 /* IncomingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IncomingTableViewCell.h; sourceTree = "<group>"; };
+		14B826D620ECF047000275E4 /* IncomingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IncomingTableViewCell.m; sourceTree = "<group>"; };
+		14B826D720ECF047000275E4 /* IncomingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IncomingTableViewCell.xib; sourceTree = "<group>"; };
+		14B826DA20ECF05F000275E4 /* OutgoingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutgoingTableViewCell.h; sourceTree = "<group>"; };
+		14B826DB20ECF05F000275E4 /* OutgoingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutgoingTableViewCell.m; sourceTree = "<group>"; };
+		14B826DC20ECF05F000275E4 /* OutgoingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OutgoingTableViewCell.xib; sourceTree = "<group>"; };
 		14C886A620EA578900FA1318 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
 		14C886A720EA578900FA1318 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
-		14C886A920EA5ED500FA1318 /* send.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = send.png; path = ../../../Downloads/send.png; sourceTree = "<group>"; };
-		14C886AD20EA609D00FA1318 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back.png; path = ../../../Downloads/back.png; sourceTree = "<group>"; };
 		14C886AF20EA612A00FA1318 /* ChatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatTableViewCell.h; sourceTree = "<group>"; };
 		14C886B020EA612A00FA1318 /* ChatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatTableViewCell.m; sourceTree = "<group>"; };
 		14C886B120EA612A00FA1318 /* ChatTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatTableViewCell.xib; sourceTree = "<group>"; };
-		14CBB65120E4C1E1003BDD43 /* sent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sent.png; path = ../../../Downloads/sent.png; sourceTree = "<group>"; };
-		14CBB65520E4CC2E003BDD43 /* nil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nil.png; path = ../../nil.png; sourceTree = "<group>"; };
 		14D6FD9F20C7B69E00FFD5F7 /* HoneyBees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoneyBees.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14D6FDA320C7B69E00FFD5F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		14D6FDA520C7B69E00FFD5F7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -129,7 +114,6 @@
 		14D6FDD520C7B6CF00FFD5F7 /* Rainbow.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Rainbow.framework; sourceTree = "<group>"; };
 		14D6FDD620C7B6CF00FFD5F7 /* WebRTC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WebRTC.framework; sourceTree = "<group>"; };
 		14D6FDDE20C7B71100FFD5F7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		14D6FDE720C7BA3800FFD5F7 /* HoneyBees icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HoneyBees icon.png"; sourceTree = "<group>"; };
 		14D6FDEF20C7BDC000FFD5F7 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		14D6FDF020C7BDC000FFD5F7 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		14DA4A1C20D0FDCA004EB41B /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
@@ -140,9 +124,7 @@
 		14E520F220DF2DE5001E8B6D /* ContactTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactTableViewCell.h; sourceTree = "<group>"; };
 		14E520F320DF2DE5001E8B6D /* ContactTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactTableViewCell.m; sourceTree = "<group>"; };
 		14E520F420DF2DE5001E8B6D /* ContactTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactTableViewCell.xib; sourceTree = "<group>"; };
-		14EA432120C927F300190B7C /* ew.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ew.jpg; sourceTree = "<group>"; };
 		14F4AF7B20C9426500254B44 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		14F7F04320E25F92003316F5 /* invite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = invite.png; path = ../../../Downloads/invite.png; sourceTree = "<group>"; };
 		5CAFB0D33A08AD43225F4773 /* Pods_HoneyBees.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HoneyBees.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75470ABDD558916972829B06 /* Pods-HoneyBees.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoneyBees.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HoneyBees/Pods-HoneyBees.debug.xcconfig"; sourceTree = "<group>"; };
 		CB06BB71352797BB159C9DFA /* Pods-HoneyBees.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoneyBees.release.xcconfig"; path = "Pods/Target Support Files/Pods-HoneyBees/Pods-HoneyBees.release.xcconfig"; sourceTree = "<group>"; };
@@ -178,27 +160,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1412465620C7F05C0008A9EF /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				14C886A920EA5ED500FA1318 /* send.png */,
-				14C886AD20EA609D00FA1318 /* back.png */,
-				14F7F04320E25F92003316F5 /* invite.png */,
-				14CBB65120E4C1E1003BDD43 /* sent.png */,
-				14CBB65520E4CC2E003BDD43 /* nil.png */,
-				14EA432120C927F300190B7C /* ew.jpg */,
-				147CBABD20E0D7C700DBE362 /* contacts_details.png */,
-				1412464920C7EB680008A9EF /* contact.png */,
-				1412464A20C7EB680008A9EF /* meeting.png */,
-				14D6FDE720C7BA3800FFD5F7 /* HoneyBees icon.png */,
-				1412463F20C7E31F0008A9EF /* Icon-32.png */,
-				1412464820C7EB680008A9EF /* conversation.png */,
-				1412464720C7EB680008A9EF /* recent.png */,
-				1412464620C7EB680008A9EF /* bubble.png */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
 		144833D120DF9A3500341465 /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +200,12 @@
 				14C886AF20EA612A00FA1318 /* ChatTableViewCell.h */,
 				14C886B020EA612A00FA1318 /* ChatTableViewCell.m */,
 				14C886B120EA612A00FA1318 /* ChatTableViewCell.xib */,
+				14B826D520ECF047000275E4 /* IncomingTableViewCell.h */,
+				14B826D620ECF047000275E4 /* IncomingTableViewCell.m */,
+				14B826D720ECF047000275E4 /* IncomingTableViewCell.xib */,
+				14B826DA20ECF05F000275E4 /* OutgoingTableViewCell.h */,
+				14B826DB20ECF05F000275E4 /* OutgoingTableViewCell.m */,
+				14B826DC20ECF05F000275E4 /* OutgoingTableViewCell.xib */,
 			);
 			name = Chat;
 			sourceTree = "<group>";
@@ -274,7 +241,6 @@
 				14B2B44720E8B2C800C9FF7E /* Account */,
 				147CBABF20E0ED1600DBE362 /* Bubbles */,
 				144833D120DF9A3500341465 /* Contacts */,
-				1412465620C7F05C0008A9EF /* Resources */,
 				14D6FDE620C7B81E00FFD5F7 /* Conversations */,
 				14D6FDE020C7B72F00FFD5F7 /* Login */,
 				14D6FDA520C7B69E00FFD5F7 /* AppDelegate.h */,
@@ -466,26 +432,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				14DA4A2020D0FDCA004EB41B /* CustomTableViewCell.xib in Resources */,
-				14CBB65220E4C1E1003BDD43 /* sent.png in Resources */,
-				1412464E20C7EB690008A9EF /* contact.png in Resources */,
-				14CBB65620E4CC2E003BDD43 /* nil.png in Resources */,
+				14B826D920ECF047000275E4 /* IncomingTableViewCell.xib in Resources */,
+				14B826DE20ECF05F000275E4 /* OutgoingTableViewCell.xib in Resources */,
 				14E520F620DF2DE5001E8B6D /* ContactTableViewCell.xib in Resources */,
-				1412464D20C7EB690008A9EF /* conversation.png in Resources */,
-				14D6FDE820C7BA3800FFD5F7 /* HoneyBees icon.png in Resources */,
 				14F4AF7C20C9426500254B44 /* Main.storyboard in Resources */,
-				1412464B20C7EB690008A9EF /* bubble.png in Resources */,
 				14D6FDDF20C7B71100FFD5F7 /* Info.plist in Resources */,
 				14D6FDB220C7B69E00FFD5F7 /* LaunchScreen.storyboard in Resources */,
-				147CBABE20E0D7C700DBE362 /* contacts_details.png in Resources */,
-				14C886AB20EA5ED500FA1318 /* send.png in Resources */,
 				14D6FDAF20C7B69E00FFD5F7 /* Assets.xcassets in Resources */,
-				1412464F20C7EB690008A9EF /* meeting.png in Resources */,
-				14F7F04420E25F92003316F5 /* invite.png in Resources */,
-				14C886AE20EA609D00FA1318 /* back.png in Resources */,
-				14EA432220C927F300190B7C /* ew.jpg in Resources */,
-				1412464020C7E31F0008A9EF /* Icon-32.png in Resources */,
 				14C886B320EA612A00FA1318 /* ChatTableViewCell.xib in Resources */,
-				1412464C20C7EB690008A9EF /* recent.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,8 +506,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				14C886A820EA578900FA1318 /* ChatViewController.m in Sources */,
+				14B826DD20ECF05F000275E4 /* OutgoingTableViewCell.m in Sources */,
 				1412465220C7EEFC0008A9EF /* ConversationTabsViewController.m in Sources */,
 				147CBAC220E0ED4200DBE362 /* BubblesViewController.m in Sources */,
+				14B826D820ECF047000275E4 /* IncomingTableViewCell.m in Sources */,
 				14C886B220EA612A00FA1318 /* ChatTableViewCell.m in Sources */,
 				147CBACE20E10F5C00DBE362 /* CntDetailsViewController.m in Sources */,
 				14E520F520DF2DE5001E8B6D /* ContactTableViewCell.m in Sources */,

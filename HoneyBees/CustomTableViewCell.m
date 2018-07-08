@@ -16,7 +16,7 @@
     self.OnlineActivity.layer.cornerRadius = self.OnlineActivity.frame.size.width/2;
     self.OnlineActivity.clipsToBounds = YES;
     self.OnlineActivity.layer.borderColor = [UIColor whiteColor].CGColor;
-    self.OnlineActivity.layer.borderWidth =1.0 ;
+    self.OnlineActivity.layer.borderWidth =2.0 ;
     
   
     

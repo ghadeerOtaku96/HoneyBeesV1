@@ -37,6 +37,7 @@
     self.ContactsTable.allowsSelection = NO;
     self.ContactsTable.delegate = self;
     self.ContactsTable.dataSource = self;
+    self.ContactsTable.separatorColor = [UIColor whiteColor];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -126,7 +127,7 @@
    
     if(contact.isInRoster) {
 
-        [cell.DetailsButton setImage:[UIImage imageNamed:@"contacts_details.png"] forState:UIControlStateNormal];
+        [cell.DetailsButton setImage:[UIImage imageNamed:@"info.png"] forState:UIControlStateNormal];
         cell.DetailsButton.contentMode = UIViewContentModeScaleAspectFit;
         cell.DetailsButton.enabled = YES;
         if(cell.DetailsButton.isSelected){

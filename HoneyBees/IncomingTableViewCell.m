@@ -1,25 +1,18 @@
 //
-//  ChatTableViewCell.m
+//  IncomingTableViewCell.m
 //  HoneyBees
 //
-//  Created by Ghadeer Abualrub on 7/2/18.
+//  Created by Ghadeer Abualrub on 7/4/18.
 //  Copyright © 2018 Ghadeer Abualrub. All rights reserved.
 //
 
-#import "ChatTableViewCell.h"
+#import "IncomingTableViewCell.h"
 
-@implementation ChatTableViewCell
+@implementation IncomingTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
-    
-    self.messageBody.userInteractionEnabled = NO;
-    self.messageBody.layer.cornerRadius = 15;
-    self.messageBody.clipsToBounds = YES;
-    
-
-    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

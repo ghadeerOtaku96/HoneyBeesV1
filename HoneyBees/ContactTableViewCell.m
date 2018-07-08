@@ -91,7 +91,7 @@
             nextVC.contact = self.contact;
         
         
-            [self.ContactVC presentViewController:nextVC animated:YES completion:nil];
+            [self.ContactVC.navigationController pushViewController:nextVC animated:YES];
         
     }
     

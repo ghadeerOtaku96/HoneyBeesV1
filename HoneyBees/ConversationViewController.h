@@ -10,7 +10,7 @@
 #import <Rainbow/Rainbow.h>
 #import "CustomTableViewCell.h"
 @interface ConversationViewController : UIViewController
-@property (strong ,nonatomic) NSMutableArray<Conversation *> *conversationsArray ;
+
 @property (strong, nonatomic) IBOutlet UITableView *ConversationsTable;
 
 @end
